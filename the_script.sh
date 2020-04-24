@@ -166,17 +166,16 @@ fi
 COL_FILE=col.txt
 awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
 
-# Pre-emptively convert all spaces to %20 to have valid URLs
-sed -i 's/ /%20/g' $COL_FILE
+# I know double quotes can be ignored, but they got pretty obnoxious
+# Also, some entries had leading spaces for whatever reason
+sed -i 's/^ //g; s/"//g' $COL_FILE
 
 #-----------------------------------------------------------------------------#
 # COLUMN DATA VALUE PARSING AND UPLOAD
 #-----------------------------------------------------------------------------#
 
 # Make sure a dir exists for text files and that it's empty
-TXT_DIR=$PWD/txt_upload
-mkdir -p $TXT_DIR
-rm -rf $TXT_DIR/*
+TXT_DIR=$PWD/txt_upload ; mkdir -p $TXT_DIR; rm -rf $TXT_DIR/*
 
 # Write counts of text with IFS set to only newline to be safe
 IFS=$'\n' 
@@ -184,9 +183,9 @@ for CURR_LN in $(cat $COL_FILE); do
     CURR_LN_FILE="$TXT_DIR/${CURR_LN}.txt"
 
     # Indicate new val, and Write count to file if not already written
-    if [ ! -f $CURR_LN_FILE ]; then
+    if [ ! -f "$CURR_LN_FILE" ]; then
         echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g')"
-        grep -c "$CURR_LN" col.txt > $CURR_LN_FILE
+        grep -c "$CURR_LN" col.txt > "$CURR_LN_FILE"
     fi
 done
 
@@ -195,6 +194,6 @@ cd $TXT_DIR
 scp -i $PRIV_KEY *.txt ubuntu@$EC2_IP:/home/ubuntu/htdocs
 
 # Do a test curl on one of the files for a sanity check
-TEST_FILE=$(ls | head -n 1)
+TEST_FILE=$(ls | head -n 1 | sed 's/ /%20/g')
 echo "Performing test curl for $TEST_FILE"
 echo "Result: $(curl http://$EC2_IP/$TEST_FILE)"
