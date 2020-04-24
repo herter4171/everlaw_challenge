@@ -100,7 +100,8 @@ if [[ $CTNOR_CT == 0 ]]; then
     docker-compose up -d
 fi
 
-# Print for sanity check
+# Make sure empty htdocs dir, and print containers for sanity check
+rm -rf htdocs/*
 docker container ls
 EOF
 
