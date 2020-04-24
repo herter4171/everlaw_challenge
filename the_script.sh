@@ -16,20 +16,22 @@
 # COMMONLY USED VARS/FUNCS AND INIT
 #-----------------------------------------------------------------------------#
 
+# Validate argument count, and print input arg spec if wrong count
+if [[ $# != 4 ]]; then 
+    echo "ERROR: Expect four arguments.  See arg list below."
+    grep -A 4 "^# Input Arguments:" $0
+    exit 1
+fi
+
 # Set names for args to make things readable
 EC2_IP=$1; PRIV_KEY=$2; CSV_URL=$3; CSV_COL=$4
 
 # Shorten SSH commands and assume remote username is "ubuntu"
 SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 
-# Single arg wrapper for sending things via SCP to /home/ubuntu on remote
-scp_up() {
-    scp -i $PRIV_KEY $1 ubuntu@$EC2_IP:/home/ubuntu
-}
-
 # Make sure we can connect to the remote and exit gracefully if not
 $SSH_PFX echo 'Hello from $HOSTNAME'
-if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 0; fi
+if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 1; fi
 
 #-----------------------------------------------------------------------------#
 # DOCKER SETUP
@@ -87,8 +89,20 @@ chmod +x /usr/local/bin/docker-compose
 echo "Installed Docker and Docker Compose"
 EOF
 
+# Print and upload a config for Docker Compose
+printf \
+"version: '3'
+services:
+  web_server:
+    image: httpd
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/htdocs:/usr/local/apache2/htdocs
+" > docker-compose.yml
+scp -i $PRIV_KEY docker-compose.yml ubuntu@$EC2_IP:/home/ubuntu
+
 # Send the Docker Compose config, then launch the web server if not running
-scp_up docker-compose.yml
 $SSH_PFX /bin/bash <<'EOF'
 CTNOR_CT=$(docker container ls \
     | awk '{print $NF}' \
