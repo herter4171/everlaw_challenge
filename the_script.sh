@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #-----------------------------------------------------------------------------#
 # AUTHOR: Justin Herter
 #
@@ -24,7 +23,7 @@
 #-----------------------------------------------------------------------------#
 
 #-----------------------------------------------------------------------------#
-# COMMONLY USED VARS/FUNCS AND INIT
+# INIT AND COMMONLY USED VARS
 #-----------------------------------------------------------------------------#
 
 # Validate argument count, and print input arg spec if wrong count
@@ -103,11 +102,11 @@ systemctl enable docker
 curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
-# Indicate done installing Docker things
+# Indicate done installing Docker things on the remote
 echo "Installed Docker and Docker Compose"
 EOF
 
-# Print and upload a Docker Compose config for an Apache Web Server
+# Print and upload a Docker Compose config for an Apache Web Server, i.e. httpd
 printf \
 "version: '3'
 services:
@@ -120,19 +119,21 @@ services:
 " > docker-compose.yml
 scp -i $PRIV_KEY docker-compose.yml ubuntu@$EC2_IP:/home/ubuntu
 
-# Send the Docker Compose config, then launch the web server if not running
+# Launch the web server if not running
 $SSH_PFX /bin/bash <<'EOF'
 CTNOR_CT=$(docker container ls \
     | awk '{print $NF}' \
     | grep -c ubuntu_web_server_1)
 
-# Need to make htdocs so it's not automatically made and owned by root
 if [[ $CTNOR_CT == 0 ]]; then 
+    # Need to make htdocs so it's not automatically made and owned by root
     mkdir -p htdocs
+
+    # Launch httpd in a detached state
     docker-compose up -d
 fi
 
-# Make sure empty htdocs dir, and print containers for sanity check
+# Ensure empty htdocs dir, and print containers for sanity check output
 rm -rf htdocs/*
 docker container ls
 EOF
@@ -147,14 +148,13 @@ CSV_FILE=$(echo ${CSV_URL##*/} | sed 's/%20/ /g')
 # Download csv file if not already present
 if [ ! -f "$CSV_FILE" ]; then 
     wget $CSV_URL
-    sed -i 1d "$CSV_FILE" # Remove first line
+    sed -i 1d "$CSV_FILE" # Remove first line to exclude column heading
 else
     echo "$CSV_FILE already downloaded."
 fi
 
 # Get number of cols from first line comma count plus one
 NUM_COLS=$((`head -n 1 "$CSV_FILE" | tr -cd , | wc -c`+1))
-echo "NUM_COLS: $NUM_COLS"
 
 # Validate column index from args
 if [ $CSV_COL -lt 1 ] || [ $CSV_COL -gt $NUM_COLS ]; then
@@ -166,7 +166,7 @@ fi
 COL_FILE=col.txt
 awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
 
-# Pre-emptively convert all spaces to %20
+# Pre-emptively convert all spaces to %20 to have valid URLs
 sed -i 's/ /%20/g' $COL_FILE
 
 #-----------------------------------------------------------------------------#
@@ -178,12 +178,12 @@ TXT_DIR=$PWD/txt_upload
 mkdir -p $TXT_DIR
 rm -rf $TXT_DIR/*
 
-# Write counts of text
+# Write counts of text with IFS set to only newline to be safe
 IFS=$'\n' 
 for CURR_LN in $(cat $COL_FILE); do
     CURR_LN_FILE="$TXT_DIR/${CURR_LN}.txt"
 
-    # Write count to file if not already written
+    # Indicate new val, and Write count to file if not already written
     if [ ! -f $CURR_LN_FILE ]; then
         echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g')"
         grep -c "$CURR_LN" col.txt > $CURR_LN_FILE
