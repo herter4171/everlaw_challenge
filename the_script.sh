@@ -3,6 +3,8 @@
 #-----------------------------------------------------------------------------#
 # Author: Justin Herter
 #
+# Functionality:  
+#
 # Input Arguments: 
 #   $1: IP address of EC2 instance to operate on
 #   $2: Path to the private SSH key for connecting to $1
@@ -32,6 +34,13 @@ SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 # Make sure we can connect to the remote and exit gracefully if not
 $SSH_PFX echo 'Hello from $HOSTNAME'
 if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 1; fi
+
+# Make sure given URL is *.csv
+if [[ $(echo $CSV_URL | grep -c .csv$) == 0 ]]; then
+    echo "ERROR: URL doesn't appear to point to a csv file."
+    echo "Given URL is \"$CSV_URL\""
+    exit 1
+fi
 
 #-----------------------------------------------------------------------------#
 # DOCKER SETUP
