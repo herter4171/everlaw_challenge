@@ -44,6 +44,12 @@ CTNOR_CT=$(docker container ls \
     | awk '{print $NF}' \
     | grep -c ubuntu_web_server_1)
 
-if [[ $CTNOR_CT == 0 ]]; then docker-compose up -d; fi
+# Need to make htdocs so it's not owned by root
+if [[ $CTNOR_CT == 0 ]]; then 
+    mkdir -p htdocs
+    docker-compose up -d
+fi
+
+# Print for sanity check
 docker container ls
 EOF
