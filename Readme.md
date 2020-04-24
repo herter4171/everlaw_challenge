@@ -1,7 +1,7 @@
 # everlaw_challenge
 I get the jitters ahead of things like this, and I'm channeling 
 that into making sure I have everything teed up ahead of time.  My plan for `Readme.md`
- is to jot down some details about the environment followed by field notes I'll jot 
+ is to note some details about the environment followed by field notes I'll jot 
  down as I progress toward a solution.
  
  My first assumption is that I'll be using Python as a scripting language.  Some or all of the 
