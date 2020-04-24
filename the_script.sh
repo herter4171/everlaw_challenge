@@ -10,6 +10,8 @@
 #   $4: Column number to parse in $3
 #-----------------------------------------------------------------------------#
 
+#TODO: Validate number of input args!
+
 #-----------------------------------------------------------------------------#
 # COMMONLY USED VARS/FUNCS
 #-----------------------------------------------------------------------------#
@@ -53,3 +55,20 @@ fi
 # Print for sanity check
 docker container ls
 EOF
+
+#-----------------------------------------------------------------------------#
+# CSV DOWNLOAD AND PARSE
+#-----------------------------------------------------------------------------#
+
+# Get filename from tail-end of URL, and add spaces where applicable
+CSV_FILE=$(echo ${CSV_URL##*/} | sed 's/%20/ /g')
+
+# Download csv file if not already present
+if [ ! -f "$CSV_FILE" ]; then 
+    wget $CSV_URL
+    sed -i 1d "$CSV_FILE" # Remove first line
+else
+    echo "$CSV_FILE already downloaded."
+fi
+
+# Get the desired column in a separate file
