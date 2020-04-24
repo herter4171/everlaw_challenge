@@ -7,10 +7,10 @@
 # the given remote EC2 instance that has values for a given column as pages
 # that contain the number of occurences of said value in the column.  Setting
 # this up involves ensuring Docker and Docker Compose are installed on the
-# remote followed by obtaining the csv file and parsing the user-specified 
-# column.  Validation includes ensuring a viable SSH pathway, a URL with the
-# csv extension, ensuring the column number is in bounds, and verifying the
-# correct number of arguments have been specified. 
+# remote followed by launching the web server, obtaining the csv file, and 
+# parsing the user-specified column.  Validation includes ensuring a viable 
+# SSH pathway, a URL with the csv extension, ensuring the column number is in 
+# bounds, and verifying the correct number of arguments have been specified. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
