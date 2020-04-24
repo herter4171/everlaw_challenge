@@ -8,9 +8,13 @@
 # that contain the number of occurences of said value in the column.  Setting
 # this up involves ensuring Docker and Docker Compose are installed on the
 # remote followed by launching the web server, obtaining the csv file, and 
-# parsing the user-specified column.  Validation includes ensuring a viable 
-# SSH pathway, a URL with the csv extension, ensuring the column number is in 
-# bounds, and verifying the correct number of arguments have been specified. 
+# parsing the user-specified column.  
+#
+# INPUT VALIDATION: The first check is ensuring exactly 4 arguments have been
+# supplied.  This is followed by ensuring a viable SSH pathway, which confirms 
+# the supplied keyfile and remote IP are valid.  From there, the URL is checked 
+# to ensure it has the csv extension.  Last of all is ensuring the column 
+# number is in bounds. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
