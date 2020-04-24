@@ -79,7 +79,7 @@ awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
 sed -i 's/ /%20/g' $COL_FILE
 
 #-----------------------------------------------------------------------------#
-# COLUMN DATA VALUE PARSING
+# COLUMN DATA VALUE PARSING AND UPLOAD
 #-----------------------------------------------------------------------------#
 
 # Make sure a dir exists for text files and that it's empty
@@ -97,3 +97,8 @@ for CURR_LN in $(cat $COL_FILE); do
         grep -c "$CURR_LN" col.txt > $CURR_LN_FILE
     fi
 done
+
+# Upload test files to the remote's htdocs folder
+cd $TXT_DIR
+scp -i $PRIV_KEY *.txt ubuntu@$EC2_IP:/home/ubuntu/htdocs
+cd ..
