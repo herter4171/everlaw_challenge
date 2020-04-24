@@ -57,7 +57,7 @@ docker container ls
 EOF
 
 #-----------------------------------------------------------------------------#
-# CSV DOWNLOAD AND PARSE
+# CSV DOWNLOAD AND COLUMN PARSE
 #-----------------------------------------------------------------------------#
 
 # Get filename from tail-end of URL, and add spaces where applicable
@@ -72,3 +72,28 @@ else
 fi
 
 # Get the desired column in a separate file
+COL_FILE=col.txt
+awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
+
+# Pre-emptively convert all spaces to %20
+sed -i 's/ /%20/g' $COL_FILE
+
+#-----------------------------------------------------------------------------#
+# COLUMN DATA VALUE PARSING
+#-----------------------------------------------------------------------------#
+
+# Make sure a dir exists for text files and that it's empty
+TXT_DIR=$PWD/txt_upload
+mkdir -p $TXT_DIR
+rm -rf $TXT_DIR/*
+
+# Write counts of text
+IFS=$'\n' 
+for CURR_LN in $(cat $COL_FILE); do
+    CURR_LN_FILE="$TXT_DIR/${CURR_LN}.txt"
+
+    if [ ! -f $CURR_LN_FILE ]; then
+        echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g')"
+        grep -c "$CURR_LN" col.txt > $CURR_LN_FILE
+    fi
+done
