@@ -78,7 +78,7 @@ apt-get install -y \
 groupadd docker
 usermod -aG docker ubuntu
 
-# Start on boot
+# Start on boot (likely overkill for this task)
 systemctl enable docker
 
 # Install Docker Compose and set +x perms
@@ -89,7 +89,7 @@ chmod +x /usr/local/bin/docker-compose
 echo "Installed Docker and Docker Compose"
 EOF
 
-# Print and upload a config for Docker Compose
+# Print and upload a Docker Compose config for an Apache Web Server
 printf \
 "version: '3'
 services:
@@ -108,7 +108,7 @@ CTNOR_CT=$(docker container ls \
     | awk '{print $NF}' \
     | grep -c ubuntu_web_server_1)
 
-# Need to make htdocs so it's not owned by root
+# Need to make htdocs so it's not automatically made and owned by root
 if [[ $CTNOR_CT == 0 ]]; then 
     mkdir -p htdocs
     docker-compose up -d
@@ -132,6 +132,16 @@ if [ ! -f "$CSV_FILE" ]; then
     sed -i 1d "$CSV_FILE" # Remove first line
 else
     echo "$CSV_FILE already downloaded."
+fi
+
+# Get number of cols from first line comma count plus one
+NUM_COLS=$((`head -n 1 "$CSV_FILE" | tr -cd , | wc -c`+1))
+echo "NUM_COLS: $NUM_COLS"
+
+# Validate column index from args
+if [ $CSV_COL -lt 1 ] || [ $CSV_COL -gt $NUM_COLS ]; then
+    echo "ERROR: Column arg must be between 1 and $NUM_COLS for \"$CSV_FILE\""
+    exit 1
 fi
 
 # Get the desired column in a separate file
