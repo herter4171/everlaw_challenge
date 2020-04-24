@@ -39,7 +39,7 @@ EC2_IP=$1; PRIV_KEY=$2; CSV_URL=$3; CSV_COL=$4
 # Shorten SSH commands and assume remote username is "ubuntu"
 SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 
-# Make sure we can connect to the remote and exit gracefully if not
+# Make sure we can connect to the remote
 $SSH_PFX echo 'Hello from $HOSTNAME'
 if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 1; fi
 
@@ -98,7 +98,7 @@ usermod -aG docker ubuntu
 # Start on boot (likely overkill for this task)
 systemctl enable docker
 
-# Install Docker Compose and set +x perms
+# Install Docker Compose and set +x perms.  Sorry for the > 80 char line
 curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
@@ -148,7 +148,7 @@ CSV_FILE=$(echo ${CSV_URL##*/} | sed 's/%20/ /g')
 # Download csv file if not already present
 if [ ! -f "$CSV_FILE" ]; then 
     wget $CSV_URL
-    sed -i 1d "$CSV_FILE" # Remove first line to exclude column heading
+    sed -i 1d "$CSV_FILE" # Remove first line to exclude column headings
 else
     echo "$CSV_FILE already downloaded."
 fi
@@ -182,7 +182,7 @@ IFS=$'\n'
 for CURR_LN in $(cat $COL_FILE); do
     CURR_LN_FILE="$TXT_DIR/${CURR_LN}.txt"
 
-    # Indicate new val, and Write count to file if not already written
+    # Indicate new val, then write count to file
     if [ ! -f "$CURR_LN_FILE" ]; then
         echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g')"
         grep -c "$CURR_LN" col.txt > "$CURR_LN_FILE"
@@ -193,7 +193,7 @@ done
 cd $TXT_DIR
 scp -i $PRIV_KEY *.txt ubuntu@$EC2_IP:/home/ubuntu/htdocs
 
-# Do a test curl on one of the files for a sanity check
+# Do a test curl on the first file alphabetically for sanity check
 TEST_FILE=$(ls | head -n 1 | sed 's/ /%20/g')
 echo "Performing test curl for $TEST_FILE"
 echo "Result: $(curl http://$EC2_IP/$TEST_FILE)"
