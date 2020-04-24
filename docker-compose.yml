@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web_server:
+    image: httpd
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/htdocs:/usr/local/apache2/htdocs

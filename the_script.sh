@@ -36,3 +36,14 @@ if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 0; fi
 # Send Docker install script up to remote, then run it
 scp_up install_docker.sh
 $SSH_PFX sudo /bin/bash install_docker.sh
+
+# Send the Docker Compose config, then launch the web server if not running
+scp_up docker-compose.yml
+$SSH_PFX /bin/bash <<'EOF'
+CTNOR_CT=$(docker container ls \
+    | awk '{print $NF}' \
+    | grep -c ubuntu_web_server_1)
+
+if [[ $CTNOR_CT == 0 ]]; then docker-compose up -d; fi
+docker container ls
+EOF
