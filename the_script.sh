@@ -184,4 +184,8 @@ done
 # Upload test files to the remote's htdocs folder
 cd $TXT_DIR
 scp -i $PRIV_KEY *.txt ubuntu@$EC2_IP:/home/ubuntu/htdocs
-cd ..
+
+# Do a test curl on one of the files for a sanity check
+TEST_FILE=$(ls | head -n 1)
+echo "Performing test curl for $TEST_FILE"
+echo "Result: $(curl http://$EC2_IP/$TEST_FILE)"
