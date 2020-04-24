@@ -1,11 +1,17 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------#
-# Author: Justin Herter
+# AUTHOR: Justin Herter
 #
-# Functionality:  
+# FUNCTIONALITY:  The end state from running this is an Apache Web Server on
+# the given remote EC2 instance that has values for a given column as pages
+# that contain the number of occurences of said value in the column.  Setting
+# this up involves ensuring Docker and Docker Compose are installed on the
+# remote followed by obtaining the csv file and parsing the user-specified 
+# column.  Validation includes ensuring a viable SSH pathway, a URL with the
+# csv extension, and ensuring the column number is in bounds. 
 #
-# Input Arguments: 
+# INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
 #   $2: Path to the private SSH key for connecting to $1
 #   $3: URL to a public *.csv file for parsing
@@ -21,7 +27,7 @@
 # Validate argument count, and print input arg spec if wrong count
 if [[ $# != 4 ]]; then 
     echo "ERROR: Expect four arguments.  See arg list below."
-    grep -A 4 "^# Input Arguments:" $0
+    grep -A 4 "^# INPUT ARGUMENTS:" $0
     exit 1
 fi
 
