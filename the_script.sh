@@ -9,7 +9,8 @@
 # this up involves ensuring Docker and Docker Compose are installed on the
 # remote followed by obtaining the csv file and parsing the user-specified 
 # column.  Validation includes ensuring a viable SSH pathway, a URL with the
-# csv extension, and ensuring the column number is in bounds. 
+# csv extension, ensuring the column number is in bounds, and verifying the
+# correct number of arguments have been specified. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
@@ -17,8 +18,6 @@
 #   $3: URL to a public *.csv file for parsing
 #   $4: Column number to parse in $3
 #-----------------------------------------------------------------------------#
-
-#TODO: Validate number of input args!
 
 #-----------------------------------------------------------------------------#
 # COMMONLY USED VARS/FUNCS AND INIT
