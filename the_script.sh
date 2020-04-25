@@ -13,13 +13,13 @@
 # supplied.  This is followed by ensuring a viable SSH pathway, which confirms 
 # the supplied keyfile and remote IP are valid.  From there, the URL is checked 
 # to ensure it has the .csv extension.  Last of all is ensuring the provided
-# column number is in bounds. 
+# column number is in bounds based on awk column indexing. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
 #   $2: Path to the private SSH key for connecting to $1
 #   $3: URL to a public *.csv file for parsing
-#   $4: Column number to parse in $3
+#   $4: Column number to parse out of $3
 #-----------------------------------------------------------------------------#
 
 #-----------------------------------------------------------------------------#
@@ -54,7 +54,7 @@ fi
 # DOCKER INSTALL AND SETUP
 #-----------------------------------------------------------------------------#
 
-# Make sure Docker and docker-compose are installed on the remote
+# Make sure Docker and Docker Compose are installed on the remote
 $SSH_PFX sudo /bin/bash <<'EOF'
 # Don't need to run through all of this if already installed
 if [[ -f $(which docker) ]] && [[ -f $(which docker-compose) ]]; then
@@ -106,7 +106,7 @@ chmod +x /usr/local/bin/docker-compose
 echo "Installed Docker and Docker Compose"
 EOF
 
-# Print and upload a Docker Compose config for an Apache Web Server, i.e. httpd
+# Print and upload a Docker Compose config for an Apache Web Server (httpd)
 printf \
 "version: '3'
 services:
@@ -156,7 +156,7 @@ fi
 # Get number of cols from first line comma count plus one
 NUM_COLS=$((`head -n 1 "$CSV_FILE" | tr -cd , | wc -c`+1))
 
-# Validate column index from args
+# Validate column index from args now that we know column count
 if [ $CSV_COL -lt 1 ] || [ $CSV_COL -gt $NUM_COLS ]; then
     echo "ERROR: Column arg must be between 1 and $NUM_COLS for \"$CSV_FILE\""
     exit 1
@@ -185,7 +185,7 @@ for CURR_LN in $(cat $COL_FILE); do
     # Indicate new val, then write count to file
     if [ ! -f "$CURR_LN_FILE" ]; then
         COUNT=$(grep -c "$CURR_LN" col.txt)
-        echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g'), Count: $COUNT"
+        echo "Unique Val: $CURR_LN, Count: $COUNT"
         echo $COUNT > "$CURR_LN_FILE"
     fi
 done
