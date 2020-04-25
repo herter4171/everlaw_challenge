@@ -40,7 +40,8 @@ EC2_IP=$1; PRIV_KEY=$2; CSV_URL=$3; CSV_COL=$4
 # Shorten SSH commands and assume remote username is "ubuntu"
 SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 
-# Make sure we can connect to the remote
+# Make sure we can connect to the remote.  User may have to enter "yes" for
+# first connection, but this seems better disabling strict key checking
 $SSH_PFX echo 'Hello from $HOSTNAME'
 if [[ $? != 0 ]]; then 
     echo "Failed to connect to $2"
@@ -201,7 +202,7 @@ IFS=$OLDIFS
 # TEXT FILE UPLOAD AND TEST
 #-----------------------------------------------------------------------------#
 
-# Upload text files to the remote's htdocs folder
+# Upload text files as a tarball to the remote's htdocs folder
 cd $TXT_DIR ; TARBALL=text_files.tar
 tar -cvf $TARBALL *.txt
 scp -i $PRIV_KEY $TARBALL ubuntu@$EC2_IP:/home/ubuntu/htdocs
