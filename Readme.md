@@ -10,7 +10,7 @@ Relevant files are as follows.
 * [herter_the_script.sh](herter_the_script.sh): Shell script with all desired functionality
 * [herter_the_script.log](herter_the_script.log): Outcome from running the above using
     * A fresh Ubuntu 18.04 EC2 instance
-    * Input parameters given in my write-up
+    * Input parameters given below
 
 These are the csv-related parameters I used for most of my testing.
 * URL: https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
@@ -29,7 +29,8 @@ Since the prompt said the script “can employ any number of additional resource
 
 ### Inputted Column Number Uses Awk Indexing
 Since awk is used to extract the desired column, the range of valid column numbers goes from one to the total number of columns.  If a number outside of the range is given, the user is made aware of the allowable range of values for column number input.
-Column Headings Should be Excluded From Parsing
+
+### Column Headings Should be Excluded From Parsing
 Based on my read of the prompt, what we’re after are counts for occurrences of column data, and I don’t think headings fall into that category.
 
 ### Ignoring Certain Characters
