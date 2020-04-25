@@ -5,15 +5,17 @@ One thing that was a bit unclear to me was whether the csv parsing should ideall
 
 The other concern I have is with the efficiency of how I’m parsing.  Since the instructions specify using command line tools over a higher-level programming language, I just run through the lines and dump a grep count into a text file when a new string is encountered based on existing outputted text file names.  This was the quickest approach I tried, but I’m still a bit on edge over how computationally expensive doing repeated grep counts could be on larger files.
 
-These are the csv-related parameters I used for most of my testing.
-* URL: https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
-* Column: 4
-
+## Files and Sample Inputs
 Relevant files are as follows.
 * [herter_the_script.sh](herter_the_script.sh): Shell script with all desired functionality
 * [herter_the_script.log](herter_the_script.log): Outcome from running the above using
     * A fresh Ubuntu 18.04 EC2 instance
     * Input parameters given in my write-up
+
+These are the csv-related parameters I used for most of my testing.
+* URL: https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
+* Column: 4
+
 
 ## Assumptions
 ### Using Ubuntu 18.04 instead of 16.04
