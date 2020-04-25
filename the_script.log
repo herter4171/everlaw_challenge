@@ -1,0 +1,1795 @@
+Warning: Permanently added '3.16.44.141' (ECDSA) to the list of known hosts.
+Hello from ip-172-31-47-26
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [916 kB]
+Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [315 kB]
+Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [43.9 kB]
+Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [11.0 kB]
+Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1065 kB]
+Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [331 kB]
+Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [10.8 kB]
+Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [4728 B]
+Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [7516 B]
+Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [4764 B]
+Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [7060 B]
+Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [4188 B]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [692 kB]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [221 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [34.3 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [8924 B]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [657 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [218 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [7176 B]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2764 B]
+Fetched 18.6 MB in 4s (4983 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20180409).
+ca-certificates set to manually installed.
+curl is already the newest version (7.58.0-2ubuntu3.8).
+curl set to manually installed.
+software-properties-common is already the newest version (0.96.24.32.12).
+software-properties-common set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https gnupg-agent
+0 upgraded, 2 newly installed, 0 to remove and 13 not upgraded.
+Need to get 6572 B of archives.
+After this operation, 196 kB of additional disk space will be used.
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1692 B]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 gnupg-agent all 2.2.4-1ubuntu1.2 [4880 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 6572 B in 0s (459 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56588 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_1.6.12_all.deb ...
+Unpacking apt-transport-https (1.6.12) ...
+Selecting previously unselected package gnupg-agent.
+Preparing to unpack .../gnupg-agent_2.2.4-1ubuntu1.2_all.deb ...
+Unpacking gnupg-agent (2.2.4-1ubuntu1.2) ...
+Setting up apt-transport-https (1.6.12) ...
+Setting up gnupg-agent (2.2.4-1ubuntu1.2) ...
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+OK
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Get:4 https://download.docker.com/linux/ubuntu bionic InRelease [64.4 kB]
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Get:6 https://download.docker.com/linux/ubuntu bionic/stable amd64 Packages [11.0 kB]
+Fetched 75.5 kB in 0s (180 kB/s)
+Reading package lists...
+Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:5 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount libltdl7 pigz
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli libltdl7
+  pigz
+0 upgraded, 7 newly installed, 0 to remove and 13 not upgraded.
+Need to get 85.8 MB of archives.
+After this operation, 385 MB of additional disk space will be used.
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 aufs-tools amd64 1:4.9+20170918-1ubuntu1 [104 kB]
+Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 libltdl7 amd64 2.4.6-2 [38.8 kB]
+Get:5 https://download.docker.com/linux/ubuntu bionic/stable amd64 containerd.io amd64 1.2.13-1 [20.1 MB]
+Get:6 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce-cli amd64 5:19.03.8~3-0~ubuntu-bionic [42.6 MB]
+Get:7 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce amd64 5:19.03.8~3-0~ubuntu-bionic [22.9 MB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+Fetched 85.8 MB in 2s (39.3 MB/s)
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 56596 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.9+20170918-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.9+20170918-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.2.13-1_amd64.deb ...
+Unpacking containerd.io (1.2.13-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.8~3-0~ubuntu-bionic_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.8~3-0~ubuntu-bionic) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.8~3-0~ubuntu-bionic_amd64.deb ...
+Unpacking docker-ce (5:19.03.8~3-0~ubuntu-bionic) ...
+Selecting previously unselected package libltdl7:amd64.
+Preparing to unpack .../6-libltdl7_2.4.6-2_amd64.deb ...
+Unpacking libltdl7:amd64 (2.4.6-2) ...
+Setting up aufs-tools (1:4.9+20170918-1ubuntu1) ...
+Setting up containerd.io (1.2.13-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up cgroupfs-mount (1.4) ...
+Setting up libltdl7:amd64 (2.4.6-2) ...
+Setting up docker-ce-cli (5:19.03.8~3-0~ubuntu-bionic) ...
+Setting up pigz (2.4-1) ...
+Setting up docker-ce (5:19.03.8~3-0~ubuntu-bionic) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for systemd (237-3ubuntu10.39) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+groupadd: group 'docker' already exists
+Synchronizing state of docker.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable docker
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   638  100   638    0     0  10813      0 --:--:-- --:--:-- --:--:-- 10813
+100 16.7M  100 16.7M    0     0  51.4M      0 --:--:-- --:--:-- --:--:-- 51.4M
+Installed Docker and Docker Compose
+Creating network "ubuntu_default" with the default driver
+Pulling web_server (httpd:)...
+latest: Pulling from library/httpd
+Digest: sha256:c9e4386ebcdf0583204e7a54d7a827577b5ff98b932c498e9ee603f7050db1c1
+Status: Downloaded newer image for httpd:latest
+Creating ubuntu_web_server_1 ... 
+[1A[2KCreating ubuntu_web_server_1 ... [32mdone[0m[1BCONTAINER ID        IMAGE               COMMAND              CREATED             STATUS                  PORTS                NAMES
+6e3c1c5128a9        httpd               "httpd-foreground"   2 seconds ago       Up Less than a second   0.0.0.0:80->80/tcp   ubuntu_web_server_1
+Will not apply HSTS. The HSTS database must be a regular and non-world-writable file.
+ERROR: could not open HSTS store at '/home/justin/.wget-hsts'. HSTS will be disabled.
+--2020-04-25 11:04:50--  https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
+Resolving data.ok.gov (data.ok.gov)... 18.205.218.45
+Connecting to data.ok.gov (data.ok.gov)|18.205.218.45|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11993535 (11M) [text/csv]
+Saving to: ‘unspsc codes_3.csv’
+
+     0K .......... .......... .......... .......... ..........  0%  509K 23s
+    50K .......... .......... .......... .......... ..........  0% 19.7M 12s
+   100K .......... .......... .......... .......... ..........  1%  681K 13s
+   150K .......... .......... .......... .......... ..........  1%  598K 15s
+   200K .......... .......... .......... .......... ..........  2% 40.8M 12s
+   250K .......... .......... .......... .......... ..........  2% 2.95M 10s
+   300K .......... .......... .......... .......... ..........  2%  809K 11s
+   350K .......... .......... .......... .......... ..........  3%  847K 11s
+   400K .......... .......... .......... .......... ..........  3% 1.04M 11s
+   450K .......... .......... .......... .......... ..........  4% 1.14M 11s
+   500K .......... .......... .......... .......... ..........  4% 1.17M 11s
+   550K .......... .......... .......... .......... ..........  5% 1.19M 11s
+   600K .......... .......... .......... .......... ..........  5% 1.42M 10s
+   650K .......... .......... .......... .......... ..........  5% 1.15M 10s
+   700K .......... .......... .......... .......... ..........  6% 1.24M 10s
+   750K .......... .......... .......... .......... ..........  6%  958K 10s
+   800K .......... .......... .......... .......... ..........  7% 1.23M 10s
+   850K .......... .......... .......... .......... ..........  7% 1.48M 10s
+   900K .......... .......... .......... .......... ..........  8% 1.38M 10s
+   950K .......... .......... .......... .......... ..........  8% 1.17M 10s
+  1000K .......... .......... .......... .......... ..........  8% 1.40M 9s
+  1050K .......... .......... .......... .......... ..........  9% 1.48M 9s
+  1100K .......... .......... .......... .......... ..........  9% 1.16M 9s
+  1150K .......... .......... .......... .......... .......... 10% 1.10M 9s
+  1200K .......... .......... .......... .......... .......... 10% 1.48M 9s
+  1250K .......... .......... .......... .......... .......... 11% 1.44M 9s
+  1300K .......... .......... .......... .......... .......... 11% 1.47M 9s
+  1350K .......... .......... .......... .......... .......... 11% 1.42M 9s
+  1400K .......... .......... .......... .......... .......... 12% 1.47M 9s
+  1450K .......... .......... .......... .......... .......... 12% 1.05M 9s
+  1500K .......... .......... .......... .......... .......... 13% 1.52M 8s
+  1550K .......... .......... .......... .......... .......... 13% 1.07M 8s
+  1600K .......... .......... .......... .......... .......... 14% 1.48M 8s
+  1650K .......... .......... .......... .......... .......... 14% 1.52M 8s
+  1700K .......... .......... .......... .......... .......... 14% 1.45M 8s
+  1750K .......... .......... .......... .......... .......... 15% 1.43M 8s
+  1800K .......... .......... .......... .......... .......... 15% 1.48M 8s
+  1850K .......... .......... .......... .......... .......... 16% 1.53M 8s
+  1900K .......... .......... .......... .......... .......... 16% 1.47M 8s
+  1950K .......... .......... .......... .......... .......... 17% 1.13M 8s
+  2000K .......... .......... .......... .......... .......... 17% 1.46M 8s
+  2050K .......... .......... .......... .......... .......... 17% 1.50M 8s
+  2100K .......... .......... .......... .......... .......... 18% 1.50M 8s
+  2150K .......... .......... .......... .......... .......... 18% 1.49M 8s
+  2200K .......... .......... .......... .......... .......... 19% 1.47M 7s
+  2250K .......... .......... .......... .......... .......... 19% 1.45M 7s
+  2300K .......... .......... .......... .......... .......... 20% 1.50M 7s
+  2350K .......... .......... .......... .......... .......... 20% 1.04M 7s
+  2400K .......... .......... .......... .......... .......... 20% 1.38M 7s
+  2450K .......... .......... .......... .......... .......... 21% 1.48M 7s
+  2500K .......... .......... .......... .......... .......... 21% 1.40M 7s
+  2550K .......... .......... .......... .......... .......... 22% 1.46M 7s
+  2600K .......... .......... .......... .......... .......... 22% 1.45M 7s
+  2650K .......... .......... .......... .......... .......... 23% 1.55M 7s
+  2700K .......... .......... .......... .......... .......... 23% 1.46M 7s
+  2750K .......... .......... .......... .......... .......... 23% 1.09M 7s
+  2800K .......... .......... .......... .......... .......... 24% 1.44M 7s
+  2850K .......... .......... .......... .......... .......... 24% 1.51M 7s
+  2900K .......... .......... .......... .......... .......... 25% 1.47M 7s
+  2950K .......... .......... .......... .......... .......... 25% 1.47M 7s
+  3000K .......... .......... .......... .......... .......... 26% 1.48M 7s
+  3050K .......... .......... .......... .......... .......... 26% 1.49M 7s
+  3100K .......... .......... .......... .......... .......... 26% 1.52M 7s
+  3150K .......... .......... .......... .......... .......... 27% 1.10M 6s
+  3200K .......... .......... .......... .......... .......... 27% 1.48M 6s
+  3250K .......... .......... .......... .......... .......... 28% 1.48M 6s
+  3300K .......... .......... .......... .......... .......... 28% 1.50M 6s
+  3350K .......... .......... .......... .......... .......... 29% 1.44M 6s
+  3400K .......... .......... .......... .......... .......... 29% 1.53M 6s
+  3450K .......... .......... .......... .......... .......... 29% 1.47M 6s
+  3500K .......... .......... .......... .......... .......... 30% 1.48M 6s
+  3550K .......... .......... .......... .......... .......... 30% 1.03M 6s
+  3600K .......... .......... .......... .......... .......... 31% 1.58M 6s
+  3650K .......... .......... .......... .......... .......... 31% 1.52M 6s
+  3700K .......... .......... .......... .......... .......... 32% 1.57M 6s
+  3750K .......... .......... .......... .......... .......... 32% 1.34M 6s
+  3800K .......... .......... .......... .......... .......... 32% 1.48M 6s
+  3850K .......... .......... .......... .......... .......... 33% 1.53M 6s
+  3900K .......... .......... .......... .......... .......... 33% 1.47M 6s
+  3950K .......... .......... .......... .......... .......... 34% 1.16M 6s
+  4000K .......... .......... .......... .......... .......... 34% 1.47M 6s
+  4050K .......... .......... .......... .......... .......... 35% 1.50M 6s
+  4100K .......... .......... .......... .......... .......... 35% 1.49M 6s
+  4150K .......... .......... .......... .......... .......... 35% 1.45M 6s
+  4200K .......... .......... .......... .......... .......... 36% 1.40M 6s
+  4250K .......... .......... .......... .......... .......... 36% 1.45M 5s
+  4300K .......... .......... .......... .......... .......... 37% 1.49M 5s
+  4350K .......... .......... .......... .......... .......... 37% 1.12M 5s
+  4400K .......... .......... .......... .......... .......... 37% 1.49M 5s
+  4450K .......... .......... .......... .......... .......... 38% 1.42M 5s
+  4500K .......... .......... .......... .......... .......... 38% 1.60M 5s
+  4550K .......... .......... .......... .......... .......... 39% 1.45M 5s
+  4600K .......... .......... .......... .......... .......... 39% 1.56M 5s
+  4650K .......... .......... .......... .......... .......... 40% 1.49M 5s
+  4700K .......... .......... .......... .......... .......... 40% 1.37M 5s
+  4750K .......... .......... .......... .......... .......... 40% 1.16M 5s
+  4800K .......... .......... .......... .......... .......... 41% 1.43M 5s
+  4850K .......... .......... .......... .......... .......... 41% 1.52M 5s
+  4900K .......... .......... .......... .......... .......... 42% 1.42M 5s
+  4950K .......... .......... .......... .......... .......... 42% 1.43M 5s
+  5000K .......... .......... .......... .......... .......... 43% 1.56M 5s
+  5050K .......... .......... .......... .......... .......... 43% 1.53M 5s
+  5100K .......... .......... .......... .......... .......... 43% 1.47M 5s
+  5150K .......... .......... .......... .......... .......... 44% 1.14M 5s
+  5200K .......... .......... .......... .......... .......... 44% 1.35M 5s
+  5250K .......... .......... .......... .......... .......... 45% 1.56M 5s
+  5300K .......... .......... .......... .......... .......... 45% 1.44M 5s
+  5350K .......... .......... .......... .......... .......... 46% 1.43M 5s
+  5400K .......... .......... .......... .......... .......... 46% 1.49M 5s
+  5450K .......... .......... .......... .......... .......... 46% 1.56M 5s
+  5500K .......... .......... .......... .......... .......... 47% 1.48M 4s
+  5550K .......... .......... .......... .......... .......... 47% 1.11M 4s
+  5600K .......... .......... .......... .......... .......... 48% 1.48M 4s
+  5650K .......... .......... .......... .......... .......... 48% 1.47M 4s
+  5700K .......... .......... .......... .......... .......... 49% 1.49M 4s
+  5750K .......... .......... .......... .......... .......... 49% 1.47M 4s
+  5800K .......... .......... .......... .......... .......... 49% 1.34M 4s
+  5850K .......... .......... .......... .......... .......... 50% 1.53M 4s
+  5900K .......... .......... .......... .......... .......... 50% 1.54M 4s
+  5950K .......... .......... .......... .......... .......... 51% 1.10M 4s
+  6000K .......... .......... .......... .......... .......... 51% 1.52M 4s
+  6050K .......... .......... .......... .......... .......... 52% 1.48M 4s
+  6100K .......... .......... .......... .......... .......... 52% 1.53M 4s
+  6150K .......... .......... .......... .......... .......... 52% 1.45M 4s
+  6200K .......... .......... .......... .......... .......... 53% 1.51M 4s
+  6250K .......... .......... .......... .......... .......... 53% 1.43M 4s
+  6300K .......... .......... .......... .......... .......... 54%  480K 4s
+  6350K .......... .......... .......... .......... .......... 54% 1.11M 4s
+  6400K .......... .......... .......... .......... .......... 55% 1.51M 4s
+  6450K .......... .......... .......... .......... .......... 55% 1.44M 4s
+  6500K .......... .......... .......... .......... .......... 55% 1.47M 4s
+  6550K .......... .......... .......... .......... .......... 56% 1.52M 4s
+  6600K .......... .......... .......... .......... .......... 56% 1.48M 4s
+  6650K .......... .......... .......... .......... .......... 57%  833K 4s
+  6700K .......... .......... .......... .......... .......... 57% 1.49M 4s
+  6750K .......... .......... .......... .......... .......... 58% 1.05M 4s
+  6800K .......... .......... .......... .......... .......... 58% 1.53M 4s
+  6850K .......... .......... .......... .......... .......... 58% 1.48M 4s
+  6900K .......... .......... .......... .......... .......... 59% 1.41M 4s
+  6950K .......... .......... .......... .......... .......... 59% 1.48M 3s
+  7000K .......... .......... .......... .......... .......... 60% 1.52M 3s
+  7050K .......... .......... .......... .......... .......... 60% 1.53M 3s
+  7100K .......... .......... .......... .......... .......... 61% 1.48M 3s
+  7150K .......... .......... .......... .......... .......... 61% 1.12M 3s
+  7200K .......... .......... .......... .......... .......... 61% 1.46M 3s
+  7250K .......... .......... .......... .......... .......... 62% 1.48M 3s
+  7300K .......... .......... .......... .......... .......... 62% 1.49M 3s
+  7350K .......... .......... .......... .......... .......... 63% 1.49M 3s
+  7400K .......... .......... .......... .......... .......... 63% 1.53M 3s
+  7450K .......... .......... .......... .......... .......... 64% 1.43M 3s
+  7500K .......... .......... .......... .......... .......... 64% 1.40M 3s
+  7550K .......... .......... .......... .......... .......... 64% 1.15M 3s
+  7600K .......... .......... .......... .......... .......... 65% 1.48M 3s
+  7650K .......... .......... .......... .......... .......... 65% 1.47M 3s
+  7700K .......... .......... .......... .......... .......... 66% 1.47M 3s
+  7750K .......... .......... .......... .......... .......... 66% 1.43M 3s
+  7800K .......... .......... .......... .......... .......... 67% 1.47M 3s
+  7850K .......... .......... .......... .......... .......... 67% 1.47M 3s
+  7900K .......... .......... .......... .......... .......... 67% 1.61M 3s
+  7950K .......... .......... .......... .......... .......... 68% 1.11M 3s
+  8000K .......... .......... .......... .......... .......... 68% 1.52M 3s
+  8050K .......... .......... .......... .......... .......... 69% 1.48M 3s
+  8100K .......... .......... .......... .......... .......... 69% 1.43M 3s
+  8150K .......... .......... .......... .......... .......... 70% 1.44M 3s
+  8200K .......... .......... .......... .......... .......... 70% 1.44M 3s
+  8250K .......... .......... .......... .......... .......... 70% 1.48M 2s
+  8300K .......... .......... .......... .......... .......... 71% 1.47M 2s
+  8350K .......... .......... .......... .......... .......... 71% 1.15M 2s
+  8400K .......... .......... .......... .......... .......... 72% 1.48M 2s
+  8450K .......... .......... .......... .......... .......... 72% 1.47M 2s
+  8500K .......... .......... .......... .......... .......... 72% 1.52M 2s
+  8550K .......... .......... .......... .......... .......... 73% 1.45M 2s
+  8600K .......... .......... .......... .......... .......... 73%  465K 2s
+  8650K .......... .......... .......... .......... .......... 74% 12.1M 2s
+  8700K .......... .......... .......... .......... .......... 74% 12.8M 2s
+  8750K .......... .......... .......... .......... .......... 75%  966K 2s
+  8800K .......... .......... .......... .......... .......... 75% 1.47M 2s
+  8850K .......... .......... .......... .......... .......... 75% 1.58M 2s
+  8900K .......... .......... .......... .......... .......... 76% 1.35M 2s
+  8950K .......... .......... .......... .......... .......... 76% 1.61M 2s
+  9000K .......... .......... .......... .......... .......... 77% 1.46M 2s
+  9050K .......... .......... .......... .......... .......... 77% 1.38M 2s
+  9100K .......... .......... .......... .......... .......... 78% 1.55M 2s
+  9150K .......... .......... .......... .......... .......... 78% 1.15M 2s
+  9200K .......... .......... .......... .......... .......... 78% 1.44M 2s
+  9250K .......... .......... .......... .......... .......... 79% 1.47M 2s
+  9300K .......... .......... .......... .......... .......... 79% 1.48M 2s
+  9350K .......... .......... .......... .......... .......... 80% 1.45M 2s
+  9400K .......... .......... .......... .......... .......... 80% 1.52M 2s
+  9450K .......... .......... .......... .......... .......... 81%  751K 2s
+  9500K .......... .......... .......... .......... .......... 81% 1.51M 2s
+  9550K .......... .......... .......... .......... .......... 81% 1.18M 2s
+  9600K .......... .......... .......... .......... .......... 82% 1.43M 2s
+  9650K .......... .......... .......... .......... .......... 82% 1.49M 1s
+  9700K .......... .......... .......... .......... .......... 83% 1.52M 1s
+  9750K .......... .......... .......... .......... .......... 83% 1.47M 1s
+  9800K .......... .......... .......... .......... .......... 84% 1.42M 1s
+  9850K .......... .......... .......... .......... .......... 84% 1.46M 1s
+  9900K .......... .......... .......... .......... .......... 84% 1.47M 1s
+  9950K .......... .......... .......... .......... .......... 85% 1.17M 1s
+ 10000K .......... .......... .......... .......... .......... 85% 1.48M 1s
+ 10050K .......... .......... .......... .......... .......... 86% 1.39M 1s
+ 10100K .......... .......... .......... .......... .......... 86% 1.58M 1s
+ 10150K .......... .......... .......... .......... .......... 87% 1.45M 1s
+ 10200K .......... .......... .......... .......... .......... 87% 1.46M 1s
+ 10250K .......... .......... .......... .......... .......... 87% 1.47M 1s
+ 10300K .......... .......... .......... .......... .......... 88% 1.49M 1s
+ 10350K .......... .......... .......... .......... .......... 88% 1.10M 1s
+ 10400K .......... .......... .......... .......... .......... 89% 1.52M 1s
+ 10450K .......... .......... .......... .......... .......... 89% 1.45M 1s
+ 10500K .......... .......... .......... .......... .......... 90% 1.57M 1s
+ 10550K .......... .......... .......... .......... .......... 90% 1.46M 1s
+ 10600K .......... .......... .......... .......... .......... 90% 1.39M 1s
+ 10650K .......... .......... .......... .......... .......... 91% 1.47M 1s
+ 10700K .......... .......... .......... .......... .......... 91% 1.60M 1s
+ 10750K .......... .......... .......... .......... .......... 92% 1.11M 1s
+ 10800K .......... .......... .......... .......... .......... 92% 1.39M 1s
+ 10850K .......... .......... .......... .......... .......... 93% 1.62M 1s
+ 10900K .......... .......... .......... .......... .......... 93% 1.48M 1s
+ 10950K .......... .......... .......... .......... .......... 93% 1.41M 1s
+ 11000K .......... .......... .......... .......... .......... 94% 1.47M 0s
+ 11050K .......... .......... .......... .......... .......... 94% 1.49M 0s
+ 11100K .......... .......... .......... .......... .......... 95% 1.51M 0s
+ 11150K .......... .......... .......... .......... .......... 95% 1.13M 0s
+ 11200K .......... .......... .......... .......... .......... 96% 1.43M 0s
+ 11250K .......... .......... .......... .......... .......... 96% 1.49M 0s
+ 11300K .......... .......... .......... .......... .......... 96% 1.48M 0s
+ 11350K .......... .......... .......... .......... .......... 97% 1.45M 0s
+ 11400K .......... .......... .......... .......... .......... 97% 1.47M 0s
+ 11450K .......... .......... .......... .......... .......... 98% 1.52M 0s
+ 11500K .......... .......... .......... .......... .......... 98% 1.46M 0s
+ 11550K .......... .......... .......... .......... .......... 99% 1.09M 0s
+ 11600K .......... .......... .......... .......... .......... 99% 1.49M 0s
+ 11650K .......... .......... .......... .......... .......... 99%  784K 0s
+ 11700K .......... ..                                         100% 9.15M=8.5s
+
+2020-04-25 11:04:59 (1.35 MB/s) - ‘unspsc codes_3.csv’ saved [11993535/11993535]
+
+Unique Val: Live animals, Count: 90
+Unique Val: Domestic pet products, Count: 8
+Unique Val: Animal feed, Count: 30
+Unique Val: Animal containment and habitats, Count: 10
+Unique Val: Saddlery and harness goods, Count: 17
+Unique Val: Seeds and bulbs and seedlings and cuttings, Count: 177
+Unique Val: Floriculture and silviculture products, Count: 175
+Unique Val: Fertilizers and plant nutrients and herbicides, Count: 28
+Unique Val: Pest control products, Count: 20
+Unique Val: Live rose bushes, Count: 703
+Unique Val: Live plants of high species or variety count flowers, Count: 1015
+Unique Val: Live plants of low species or variety count flowers, Count: 224
+Unique Val: Live chrysanthemums, Count: 210
+Unique Val: Live carnations, Count: 34
+Unique Val: Live orchids, Count: 122
+Unique Val: Fresh cut rose, Count: 703
+Unique Val: Fresh cut blooms of high species or variety count flowers, Count: 1014
+Unique Val: Fresh cut blooms of low species or variety count flowers, Count: 224
+Unique Val: Fresh cut chrysanthemums, Count: 210
+Unique Val: Fresh cut floral bouquets, Count: 8
+Unique Val: Fresh cut carnations, Count: 34
+Unique Val: Fresh cut orchids, Count: 122
+Unique Val: Dried cut roses, Count: 703
+Unique Val: Dried cut blooms of high species or variety count flowers, Count: 1014
+Unique Val: Dried cut blooms of low species or variety count flowers, Count: 224
+Unique Val: Dried cut chrysanthemums, Count: 210
+Unique Val: Dried cut carnations, Count: 34
+Unique Val: Dried cut orchids, Count: 122
+Unique Val: Fresh cut greenery, Count: 152
+Unique Val: Minerals and ores and metals, Count: 101
+Unique Val: Earth and stone, Count: 31
+Unique Val: Non edible plant and forestry products, Count: 52
+Unique Val: Non edible animal products, Count: 17
+Unique Val: Scrap and waste materials, Count: 12
+Unique Val: Fibers and threads and yarns, Count: 51
+Unique Val: Fabrics and leather materials, Count: 84
+Unique Val: Alloys, Count: 18
+Unique Val: Metal oxide, Count: 12
+Unique Val: Metal waste scrap and by products, Count: 26
+Unique Val: Explosive materials, Count: 30
+Unique Val: Elements and gases, Count: 129
+Unique Val: Additives, Count: 131
+Unique Val: Colorants, Count: 34
+Unique Val: Waxes and oils, Count: 6
+Unique Val: Solvents, Count: 6
+Unique Val: Compounds and mixtures, Count: 82
+Unique Val: Pharmaceutical drug precursors, Count: 12
+Unique Val: Rubber and elastomers, Count: 70
+Unique Val: Resins and rosins and other resin derived materials, Count: 115
+Unique Val: Paper materials, Count: 1
+Unique Val: Paper products, Count: 94
+Unique Val: Industrial use papers, Count: 47
+Unique Val: Fuels, Count: 31
+Unique Val: Gaseous fuels and additives, Count: 14
+Unique Val: Lubricants and oils and greases and anti corrosives, Count: 40
+Unique Val: Fuel for nuclear reactors, Count: 7
+Unique Val: Mining and quarrying machinery and equipment, Count: 63
+Unique Val: Well drilling and operation equipment, Count: 39
+Unique Val: Oil and gas drilling and exploration equipment, Count: 468
+Unique Val: Oil and gas drilling and operation materials, Count: 26
+Unique Val: Oil and gas operating and production equipment, Count: 87
+Unique Val: Agricultural and forestry and landscape machinery and equipment, Count: 109
+Unique Val: Fishing and aquaculture equipment, Count: 9
+Unique Val: Heavy construction machinery and equipment, Count: 102
+Unique Val: Raw materials processing machinery, Count: 36
+Unique Val: Petroleum processing machinery, Count: 13
+Unique Val: Textile and fabric machinery and accessories, Count: 41
+Unique Val: Lapidary machinery and equipment, Count: 23
+Unique Val: Leatherworking repairing machinery and equipment, Count: 12
+Unique Val: Industrial process machinery and equipment and supplies, Count: 209
+Unique Val: Foundry machines and equipment and supplies, Count: 18
+Unique Val: Industrial food and beverage equipment, Count: 42
+Unique Val: Mixers and their parts and accessories, Count: 10
+Unique Val: Mass transfer equipment, Count: 14
+Unique Val: Electronic manufacturing machinery and equipment and accessories, Count: 9
+Unique Val: Chicken processing machinery and equipment, Count: 6
+Unique Val: Sawmilling and lumber processing machinery and equipment, Count: 23
+Unique Val: Metal cutting machinery and accessories, Count: 152
+Unique Val: Metal forming machinery and accessories, Count: 41
+Unique Val: Rapid prototyping machinery and accessories, Count: 7
+Unique Val: Welding and soldering and brazing machinery and accessories and supplies, Count: 72
+Unique Val: Metal treatment machinery, Count: 18
+Unique Val: Industrial machine tools, Count: 15
+Unique Val: Wire machinery and equipment, Count: 1
+Unique Val: Material handling machinery and equipment, Count: 173
+Unique Val: Containers and storage, Count: 88
+Unique Val: Packaging materials, Count: 26
+Unique Val: Industrial refrigeration, Count: 29
+Unique Val: Packing supplies, Count: 35
+Unique Val: Motor vehicles, Count: 84
+Unique Val: Marine transport, Count: 113
+Unique Val: Railway and tramway machinery and equipment, Count: 29
+Unique Val: Aircraft, Count: 35
+Unique Val: Spacecraft, Count: 11
+Unique Val: Non motorized cycles, Count: 10
+Unique Val: Transportation components and systems, Count: 279
+Unique Val: Vehicle bodies and trailers, Count: 33
+Unique Val: Transportation services equipment, Count: 113
+Unique Val: Aerospace systems and components and equipment, Count: 87
+Unique Val: Power sources, Count: 150
+Unique Val: Batteries and generators and kinetic power transmission, Count: 130
+Unique Val: Electrical wire and cable and harness, Count: 154
+Unique Val: Power generation, Count: 41
+Unique Val: Atomic and nuclear energy machinery and equipment, Count: 56
+Unique Val: Hand tools, Count: 532
+Unique Val: Hydraulic machinery and equipment, Count: 32
+Unique Val: Pneumatic machinery and equipment, Count: 46
+Unique Val: Automotive specialty tools, Count: 2
+Unique Val: Structural components and basic shapes, Count: 201
+Unique Val: Concrete and cement and plaster, Count: 22
+Unique Val: Roads and landscape, Count: 37
+Unique Val: Structural building products, Count: 32
+Unique Val: Insulation, Count: 18
+Unique Val: Exterior finishing materials, Count: 38
+Unique Val: Interior finishing materials, Count: 76
+Unique Val: Doors and windows and glass, Count: 77
+Unique Val: Plumbing fixtures, Count: 41
+Unique Val: Construction and maintenance support equipment, Count: 32
+Unique Val: Portable Structure Building Components, Count: 21
+Unique Val: Underground mining structures and materials, Count: 5
+Unique Val: Structural materials, Count: 267
+Unique Val: Castings and casting assemblies, Count: 150
+Unique Val: Extrusions, Count: 51
+Unique Val: Machined castings, Count: 213
+Unique Val: Forgings, Count: 190
+Unique Val: Moldings, Count: 85
+Unique Val: Rope and chain and cable and wire and strap, Count: 88
+Unique Val: Hardware, Count: 370
+Unique Val: Bearings and bushings and wheels and gears, Count: 92
+Unique Val: Packings glands boots and covers, Count: 7
+Unique Val: Grinding and polishing and smoothing materials, Count: 23
+Unique Val: Adhesives and sealants, Count: 82
+Unique Val: Paints and primers and finishes, Count: 58
+Unique Val: Dyeing and tanning extracts, Count: 3
+Unique Val: Machined raw stock, Count: 44
+Unique Val: Industrial optics, Count: 58
+Unique Val: Pneumatic and hydraulic and electric control systems, Count: 17
+Unique Val: Housings and cabinets and casings, Count: 12
+Unique Val: Machine made parts, Count: 2
+Unique Val: Stampings and sheet components, Count: 171
+Unique Val: Machined extrusions, Count: 80
+Unique Val: Machined forgings, Count: 95
+Unique Val: Fabricated pipe assemblies, Count: 77
+Unique Val: Fabricated bar stock assemblies, Count: 77
+Unique Val: Fabricated structural assemblies, Count: 77
+Unique Val: Fabricated sheet assemblies, Count: 77
+Unique Val: Fabricated tube assemblies, Count: 77
+Unique Val: Fabricated plate assemblies, Count: 77
+Unique Val: Refractories, Count: 26
+Unique Val: Magnets and magnetic materials, Count: 275
+Unique Val: Machinings, Count: 18
+Unique Val: Gaskets, Count: 36
+Unique Val: Seals, Count: 26
+Unique Val: Sintered parts, Count: 22
+Unique Val: Printed circuits and integrated circuits and microassemblies, Count: 117
+Unique Val: Discrete semiconductor devices, Count: 38
+Unique Val: Passive discrete components, Count: 46
+Unique Val: Electronic hardware and component parts and accessories, Count: 22
+Unique Val: Electron tube devices and accessories, Count: 32
+Unique Val: Automation control devices and components and accessories, Count: 34
+Unique Val: Lamps and lightbulbs and lamp components, Count: 37
+Unique Val: Lighting Fixtures and Accessories, Count: 144
+Unique Val: Electrical equipment and components and supplies, Count: 378
+Unique Val: Electrical wire management devices and accessories and supplies, Count: 38
+Unique Val: Heating and ventilation and air circulation, Count: 112
+Unique Val: Fluid and gas distribution, Count: 166
+Unique Val: Industrial pumps and compressors, Count: 118
+Unique Val: Industrial filtering and purification, Count: 54
+Unique Val: Pipe piping and pipe fittings, Count: 401
+Unique Val: Tubes tubing and tube fittings, Count: 119
+Unique Val: Laboratory and scientific equipment, Count: 672
+Unique Val: Measuring and observing and testing instruments, Count: 1126
+Unique Val: Laboratory supplies and fixtures, Count: 168
+Unique Val: Veterinary equipment and supplies, Count: 29
+Unique Val: Medical apparel and textiles, Count: 45
+Unique Val: Patient care and treatment products and supplies, Count: 237
+Unique Val: Dental equipment and supplies, Count: 306
+Unique Val: Dialysis equipment and supplies, Count: 54
+Unique Val: Emergency and field medical services products, Count: 70
+Unique Val: Patient exam and monitoring products, Count: 256
+Unique Val: Medical facility products, Count: 89
+Unique Val: Medical diagnostic imaging and nuclear medicine products, Count: 206
+Unique Val: Independent living aids for the physically challenged, Count: 99
+Unique Val: Intravenous and arterial administration products, Count: 75
+Unique Val: Clinical nutrition, Count: 38
+Unique Val: Orthopedic and prosthetic and sports medicine products, Count: 58
+Unique Val: Physical and occupational therapy and rehabilitation products, Count: 42
+Unique Val: Postmortem and mortuary equipment and supplies, Count: 62
+Unique Val: Respiratory and anesthesia and resuscitation products, Count: 122
+Unique Val: Medical sterilization products, Count: 73
+Unique Val: Surgical products, Count: 517
+Unique Val: Medical training and education supplies, Count: 8
+Unique Val: Wound care products, Count: 101
+Unique Val: Orthopedic surgical implants, Count: 100
+Unique Val: Communications Devices and Accessories, Count: 46
+Unique Val: Components for information technology or broadcasting or telecommunications, Count: 141
+Unique Val: Computer Equipment and Accessories, Count: 112
+Unique Val: Data Voice or Multimedia Network Equipment or Platforms and Accessories, Count: 212
+Unique Val: Software, Count: 161
+Unique Val: Office machines and their supplies and accessories, Count: 172
+Unique Val: Office and desk accessories, Count: 75
+Unique Val: Office supplies, Count: 127
+Unique Val: Printing and publishing equipment, Count: 63
+Unique Val: Audio and visual presentation and composing equipment, Count: 83
+Unique Val: Photographic or filming or video equipment, Count: 83
+Unique Val: Photographic and recording media, Count: 12
+Unique Val: Photographic filmmaking supplies, Count: 16
+Unique Val: Light weapons and ammunition, Count: 15
+Unique Val: Conventional war weapons, Count: 14
+Unique Val: Missiles, Count: 17
+Unique Val: Rockets and subsystems, Count: 9
+Unique Val: Launchers, Count: 2
+Unique Val: Law enforcement, Count: 33
+Unique Val: Public safety and control, Count: 53
+Unique Val: Security surveillance and detection, Count: 64
+Unique Val: Personal safety and protection, Count: 139
+Unique Val: Fire protection, Count: 32
+Unique Val: Defense and law enforcement and security and safety training equipment, Count: 4
+Unique Val: Workplace safety equipment and supplies and training materials, Count: 8
+Unique Val: Military weapon and ammunition disarmament and disposal equipment and related products, Count: 10
+Unique Val: Water and wastewater treatment supply and disposal, Count: 87
+Unique Val: Industrial laundry and dry cleaning equipment, Count: 14
+Unique Val: Janitorial equipment, Count: 44
+Unique Val: Cleaning and janitorial supplies, Count: 78
+Unique Val: Institutional food services equipment, Count: 144
+Unique Val: Vending machines, Count: 25
+Unique Val: Gambling or wagering equipment, Count: 6
+Unique Val: Funeral equipment and materials, Count: 5
+Unique Val: Collectibles and awards, Count: 21
+Unique Val: Camping and outdoor equipment and accessories, Count: 15
+Unique Val: Fishing and hunting equipment, Count: 13
+Unique Val: Watersports equipment, Count: 15
+Unique Val: Winter sports equipment, Count: 9
+Unique Val: Field and court sports equipment, Count: 59
+Unique Val: Gymnastics and boxing equipment, Count: 13
+Unique Val: Target and table games and equipment, Count: 29
+Unique Val: Fitness equipment, Count: 25
+Unique Val: Other sports, Count: 47
+Unique Val: Sports equipment and accessories, Count: 33
+Unique Val: Recreation and playground and swimming and spa equipment and supplies, Count: 29
+Unique Val: Nuts and seeds, Count: 10
+Unique Val: Meat and poultry products, Count: 100
+Unique Val: Seafood, Count: 16
+Unique Val: Dairy products and eggs, Count: 35
+Unique Val: Edible oils and fats, Count: 7
+Unique Val: Chocolate and sugars and sweeteners and confectionary products, Count: 9
+Unique Val: Seasonings and preservatives, Count: 28
+Unique Val: Bread and bakery products, Count: 19
+Unique Val: Prepared and preserved foods, Count: 48
+Unique Val: Beverages, Count: 98
+Unique Val: Tobacco and smoking products and substitutes, Count: 12
+Unique Val: Cereal and pulse products, Count: 18
+Unique Val: Fresh fruits, Count: 1232
+Unique Val: Organic fresh fruits, Count: 1203
+Unique Val: Dried fruit, Count: 1203
+Unique Val: Dried organic fruit, Count: 1203
+Unique Val: Frozen fruit, Count: 1203
+Unique Val: Frozen organic fruit, Count: 1203
+Unique Val: Canned or jarred fruit, Count: 1203
+Unique Val: Canned or jarred organic fruit, Count: 1203
+Unique Val: Fresh fruit purees, Count: 1227
+Unique Val: Organic fresh fruit purees, Count: 1202
+Unique Val: Fresh vegetables, Count: 910
+Unique Val: Organic fresh vegetables, Count: 872
+Unique Val: Dried vegetables, Count: 875
+Unique Val: Dried organic vegetables, Count: 873
+Unique Val: Frozen vegetables, Count: 877
+Unique Val: Frozen organic vegetables, Count: 873
+Unique Val: Canned or jarred vegetables, Count: 879
+Unique Val: Canned or jarred organic vegetables, Count: 873
+Unique Val: Fresh vegetable purees, Count: 902
+Unique Val: Organic fresh vegetable purees, Count: 872
+Unique Val: Nutritional supplements, Count: 42
+Unique Val: Non GMO fresh fruits, Count: 1202
+Unique Val: Dried non GMO fruits, Count: 1201
+Unique Val: Frozen non GMO fruits, Count: 1174
+Unique Val: Canned or jarred non GMO fruits, Count: 1203
+Unique Val: Non GMO fresh fruit purees, Count: 1199
+Unique Val: Non GMO fresh vegetables, Count: 864
+Unique Val: Dried Non GMO vegetables, Count: 873
+Unique Val: Frozen Non GMO vegetables, Count: 873
+Unique Val: Canned or jarred Non GMO vegetables, Count: 873
+Unique Val: Non GMO fresh vegetable purees, Count: 880
+Unique Val: Amebicides and trichomonacides and antiprotozoals, Count: 195
+Unique Val: Antineoplastic agents, Count: 295
+Unique Val: Antiarrythmics and antianginals and cardioplegics and drugs for heart failure, Count: 136
+Unique Val: Hematolic drugs, Count: 201
+Unique Val: Central nervous system drugs, Count: 395
+Unique Val: Autonomic nervous system drugs, Count: 212
+Unique Val: Drugs affecting the respiratory tract, Count: 322
+Unique Val: Drugs affecting the gastrointestinal system, Count: 528
+Unique Val: Hormones and hormone antagonists, Count: 307
+Unique Val: Agents affecting water and electrolytes, Count: 222
+Unique Val: Immunomodulating drugs, Count: 168
+Unique Val: Drugs affecting the ears, Count: 333
+Unique Val: Adrenergic blocking agents, Count: 212
+Unique Val: Anaesthetic drugs and related adjuncts and analeptics, Count: 267
+Unique Val: Antibacterials, Count: 873
+Unique Val: Antidepressants, Count: 303
+Unique Val: Antifungal drugs, Count: 121
+Unique Val: Antihistamines or H1 blockers, Count: 336
+Unique Val: Antihyperlipidemic and hypocholesterolemic agents, Count: 106
+Unique Val: Antipsychotics, Count: 286
+Unique Val: Antiviral drugs, Count: 154
+Unique Val: Estrogens and progestins and internal contraceptives, Count: 164
+Unique Val: Hypnotics, Count: 138
+Unique Val: Controlled substance analgesics, Count: 295
+Unique Val: Nonsteroidal anti inflammatory drugs NSAIDs, Count: 326
+Unique Val: Sympathomimetic or adrenergic drugs, Count: 238
+Unique Val: Tranquilizers and antimanic and antianxiety drugs, Count: 123
+Unique Val: Vasodilators, Count: 152
+Unique Val: Corticosteroids, Count: 187
+Unique Val: Antihypertensive drugs, Count: 346
+Unique Val: Radiopharmaceuticals and contrast media, Count: 127
+Unique Val: Anthelmintics, Count: 127
+Unique Val: Herbal drugs, Count: 46
+Unique Val: Antiseptics, Count: 117
+Unique Val: Floor coverings, Count: 16
+Unique Val: Bedclothes and table and kitchen linen and towels, Count: 28
+Unique Val: Window treatments, Count: 11
+Unique Val: Domestic appliances, Count: 91
+Unique Val: Domestic kitchenware and kitchen supplies, Count: 138
+Unique Val: Consumer electronics, Count: 67
+Unique Val: Domestic wall treatments, Count: 2
+Unique Val: Clothing, Count: 112
+Unique Val: Footwear, Count: 36
+Unique Val: Luggage and handbags and packs and cases, Count: 19
+Unique Val: Personal care products, Count: 65
+Unique Val: Sewing supplies and accessories, Count: 38
+Unique Val: Jewelry, Count: 25
+Unique Val: Timepieces, Count: 21
+Unique Val: Gemstones, Count: 11
+Unique Val: Printed media, Count: 29
+Unique Val: Electronic reference material, Count: 17
+Unique Val: Signage and accessories, Count: 85
+Unique Val: Accommodation furniture, Count: 88
+Unique Val: Commercial and industrial furniture, Count: 67
+Unique Val: Classroom and instructional and institutional furniture and fixtures, Count: 61
+Unique Val: Merchandising furniture and accessories, Count: 14
+Unique Val: Decorative adornments, Count: 14
+Unique Val: Developmental and professional teaching aids and materials and accessories and supplies, Count: 651
+Unique Val: Classroom decoratives and supplies, Count: 38
+Unique Val: Arts and crafts equipment and accessories and supplies, Count: 363
+Unique Val: Musical Instruments and parts and accessories, Count: 187
+Unique Val: Toys and games, Count: 60
+Unique Val: Contracts and Agreements, Count: 106
+Unique Val: Fisheries and aquaculture, Count: 32
+Unique Val: Horticulture, Count: 24
+Unique Val: Livestock services, Count: 37
+Unique Val: Land and soil preparation and management and protection, Count: 19
+Unique Val: Crop production and management and protection, Count: 57
+Unique Val: Forestry, Count: 39
+Unique Val: Wildlife and flora, Count: 13
+Unique Val: Water resources development and oversight, Count: 27
+Unique Val: Mining services, Count: 21
+Unique Val: Oil and gas exploration services, Count: 68
+Unique Val: Well drilling and construction services, Count: 229
+Unique Val: Oil and gas extraction and production enhancement services, Count: 63
+Unique Val: Oil and gas restoration and reclamation services, Count: 14
+Unique Val: Oil and gas data management and processing services, Count: 45
+Unique Val: Oil and gas well project management services, Count: 48
+Unique Val: Building and facility maintenance and repair services, Count: 37
+Unique Val: Residential building construction services, Count: 19
+Unique Val: Nonresidential building construction services, Count: 45
+Unique Val: Heavy construction services, Count: 67
+Unique Val: Specialized trade construction and maintenance services, Count: 265
+Unique Val: Plastic and chemical industries, Count: 27
+Unique Val: Wood and paper industries, Count: 11
+Unique Val: Metal and mineral industries, Count: 27
+Unique Val: Food and beverage industries, Count: 28
+Unique Val: Fibers and textiles and fabric industries, Count: 25
+Unique Val: Manufacturing support services, Count: 45
+Unique Val: Machinery and transport equipment manufacture, Count: 26
+Unique Val: Manufacture of electrical goods and precision instruments, Count: 18
+Unique Val: Machining and processing services, Count: 76
+Unique Val: Decontamination services, Count: 9
+Unique Val: Cleaning and janitorial services, Count: 12
+Unique Val: Refuse disposal and treatment, Count: 51
+Unique Val: Toxic and hazardous waste cleanup, Count: 6
+Unique Val: Environmental management, Count: 38
+Unique Val: Environmental protection, Count: 11
+Unique Val: Pollution tracking and monitoring and rehabilitation, Count: 28
+Unique Val: Pollutants tracking and monitoring and rehabilitation services, Count: 9
+Unique Val: Mail and cargo transport, Count: 52
+Unique Val: Passenger transport, Count: 28
+Unique Val: Material packing and handling, Count: 6
+Unique Val: Storage, Count: 14
+Unique Val: Transport services, Count: 26
+Unique Val: Transportation repair or maintenance services, Count: 20
+Unique Val: Management advisory services, Count: 28
+Unique Val: Human resources services, Count: 55
+Unique Val: Legal services, Count: 38
+Unique Val: Real estate services, Count: 17
+Unique Val: Marketing and distribution, Count: 53
+Unique Val: Trade policy and services, Count: 10
+Unique Val: Business administration services, Count: 15
+Unique Val: Public relations and professional communications services, Count: 31
+Unique Val: Professional engineering services, Count: 71
+Unique Val: Computer services, Count: 104
+Unique Val: Economics, Count: 12
+Unique Val: Statistics, Count: 5
+Unique Val: Manufacturing technologies, Count: 25
+Unique Val: Earth science services, Count: 22
+Unique Val: Information Technology Service Delivery, Count: 17
+Unique Val: Biological science services, Count: 6
+Unique Val: Advertising, Count: 23
+Unique Val: Writing and translations, Count: 87
+Unique Val: Reproduction services, Count: 27
+Unique Val: Photographic services, Count: 9
+Unique Val: Graphic design, Count: 9
+Unique Val: Professional artists and performers, Count: 22
+Unique Val: Film and theater production support services, Count: 5
+Unique Val: Utilities, Count: 26
+Unique Val: Telecommunications media services, Count: 55
+Unique Val: Information services, Count: 14
+Unique Val: Development finance, Count: 12
+Unique Val: Accounting and bookkeeping services, Count: 16
+Unique Val: Banking and investment, Count: 27
+Unique Val: Insurance and retirement services, Count: 34
+Unique Val: Credit agencies, Count: 7
+Unique Val: Comprehensive health services, Count: 21
+Unique Val: Disease prevention and control, Count: 35
+Unique Val: Medical practice, Count: 54
+Unique Val: Medical science research and experimentation, Count: 22
+Unique Val: Alternative and holistic medicine, Count: 9
+Unique Val: Food and nutrition services, Count: 21
+Unique Val: Medical Surgical Equipment Maintenance Refurbishment and Repair Services, Count: 5
+Unique Val: Death and dying support services, Count: 3
+Unique Val: Vocational training, Count: 46
+Unique Val: Alternative educational systems, Count: 13
+Unique Val: Educational institutions, Count: 11
+Unique Val: Specialized educational services, Count: 23
+Unique Val: Educational facilities, Count: 11
+Unique Val: Restaurants and catering, Count: 20
+Unique Val: Hotels and lodging and meeting facilities, Count: 16
+Unique Val: Travel facilitation, Count: 9
+Unique Val: Performing arts, Count: 7
+Unique Val: Commercial sports, Count: 9
+Unique Val: Entertainment services, Count: 18
+Unique Val: Personal appearance, Count: 20
+Unique Val: Domestic and personal assistance, Count: 18
+Unique Val: Public order and safety, Count: 22
+Unique Val: Military services and national defense, Count: 67
+Unique Val: Security and personal safety, Count: 15
+Unique Val: Political systems and institutions, Count: 21
+Unique Val: Socio political conditions, Count: 15
+Unique Val: International relations, Count: 35
+Unique Val: Humanitarian aid and relief, Count: 28
+Unique Val: Community and social services, Count: 80
+Unique Val: Public administration and finance services, Count: 32
+Unique Val: Taxation, Count: 25
+Unique Val: Trade policy and regulation, Count: 14
+Unique Val: Work related organizations, Count: 30
+Unique Val: Religious organizations, Count: 16
+Unique Val: Clubs, Count: 30
+Unique Val: Civic organizations and associations and movements, Count: 28
+Unique Val: Land parcels, Count: 31
+Unique Val: Thoroughfares, Count: 21
+Unique Val: Permanent buildings and structures, Count: 141
+Unique Val: Portable buildings and structures, Count: 11
+Unique Val: Prefabricated buildings and structures, Count: 26
+Accommodation furniture.txt
+Accounting and bookkeeping services.txt
+Additives.txt
+Adhesives and sealants.txt
+Adrenergic blocking agents.txt
+Advertising.txt
+Aerospace systems and components and equipment.txt
+Agents affecting water and electrolytes.txt
+Agricultural and forestry and landscape machinery and equipment.txt
+Aircraft.txt
+Alloys.txt
+Alternative and holistic medicine.txt
+Alternative educational systems.txt
+Amebicides and trichomonacides and antiprotozoals.txt
+Anaesthetic drugs and related adjuncts and analeptics.txt
+Animal containment and habitats.txt
+Animal feed.txt
+Anthelmintics.txt
+Antiarrythmics and antianginals and cardioplegics and drugs for heart failure.txt
+Antibacterials.txt
+Antidepressants.txt
+Antifungal drugs.txt
+Antihistamines or H1 blockers.txt
+Antihyperlipidemic and hypocholesterolemic agents.txt
+Antihypertensive drugs.txt
+Antineoplastic agents.txt
+Antipsychotics.txt
+Antiseptics.txt
+Antiviral drugs.txt
+Arts and crafts equipment and accessories and supplies.txt
+Atomic and nuclear energy machinery and equipment.txt
+Audio and visual presentation and composing equipment.txt
+Automation control devices and components and accessories.txt
+Automotive specialty tools.txt
+Autonomic nervous system drugs.txt
+Banking and investment.txt
+Batteries and generators and kinetic power transmission.txt
+Bearings and bushings and wheels and gears.txt
+Bedclothes and table and kitchen linen and towels.txt
+Beverages.txt
+Biological science services.txt
+Bread and bakery products.txt
+Building and facility maintenance and repair services.txt
+Business administration services.txt
+Camping and outdoor equipment and accessories.txt
+Canned or jarred Non GMO vegetables.txt
+Canned or jarred fruit.txt
+Canned or jarred non GMO fruits.txt
+Canned or jarred organic fruit.txt
+Canned or jarred organic vegetables.txt
+Canned or jarred vegetables.txt
+Castings and casting assemblies.txt
+Central nervous system drugs.txt
+Cereal and pulse products.txt
+Chicken processing machinery and equipment.txt
+Chocolate and sugars and sweeteners and confectionary products.txt
+Civic organizations and associations and movements.txt
+Classroom and instructional and institutional furniture and fixtures.txt
+Classroom decoratives and supplies.txt
+Cleaning and janitorial services.txt
+Cleaning and janitorial supplies.txt
+Clinical nutrition.txt
+Clothing.txt
+Clubs.txt
+Collectibles and awards.txt
+Colorants.txt
+Commercial and industrial furniture.txt
+Commercial sports.txt
+Communications Devices and Accessories.txt
+Community and social services.txt
+Components for information technology or broadcasting or telecommunications.txt
+Compounds and mixtures.txt
+Comprehensive health services.txt
+Computer Equipment and Accessories.txt
+Computer services.txt
+Concrete and cement and plaster.txt
+Construction and maintenance support equipment.txt
+Consumer electronics.txt
+Containers and storage.txt
+Contracts and Agreements.txt
+Controlled substance analgesics.txt
+Conventional war weapons.txt
+Corticosteroids.txt
+Credit agencies.txt
+Crop production and management and protection.txt
+Dairy products and eggs.txt
+Data Voice or Multimedia Network Equipment or Platforms and Accessories.txt
+Death and dying support services.txt
+Decontamination services.txt
+Decorative adornments.txt
+Defense and law enforcement and security and safety training equipment.txt
+Dental equipment and supplies.txt
+Development finance.txt
+Developmental and professional teaching aids and materials and accessories and supplies.txt
+Dialysis equipment and supplies.txt
+Discrete semiconductor devices.txt
+Disease prevention and control.txt
+Domestic and personal assistance.txt
+Domestic appliances.txt
+Domestic kitchenware and kitchen supplies.txt
+Domestic pet products.txt
+Domestic wall treatments.txt
+Doors and windows and glass.txt
+Dried Non GMO vegetables.txt
+Dried cut blooms of high species or variety count flowers.txt
+Dried cut blooms of low species or variety count flowers.txt
+Dried cut carnations.txt
+Dried cut chrysanthemums.txt
+Dried cut orchids.txt
+Dried cut roses.txt
+Dried fruit.txt
+Dried non GMO fruits.txt
+Dried organic fruit.txt
+Dried organic vegetables.txt
+Dried vegetables.txt
+Drugs affecting the ears.txt
+Drugs affecting the gastrointestinal system.txt
+Drugs affecting the respiratory tract.txt
+Dyeing and tanning extracts.txt
+Earth and stone.txt
+Earth science services.txt
+Economics.txt
+Edible oils and fats.txt
+Educational facilities.txt
+Educational institutions.txt
+Electrical equipment and components and supplies.txt
+Electrical wire and cable and harness.txt
+Electrical wire management devices and accessories and supplies.txt
+Electron tube devices and accessories.txt
+Electronic hardware and component parts and accessories.txt
+Electronic manufacturing machinery and equipment and accessories.txt
+Electronic reference material.txt
+Elements and gases.txt
+Emergency and field medical services products.txt
+Entertainment services.txt
+Environmental management.txt
+Environmental protection.txt
+Estrogens and progestins and internal contraceptives.txt
+Explosive materials.txt
+Exterior finishing materials.txt
+Extrusions.txt
+Fabricated bar stock assemblies.txt
+Fabricated pipe assemblies.txt
+Fabricated plate assemblies.txt
+Fabricated sheet assemblies.txt
+Fabricated structural assemblies.txt
+Fabricated tube assemblies.txt
+Fabrics and leather materials.txt
+Fertilizers and plant nutrients and herbicides.txt
+Fibers and textiles and fabric industries.txt
+Fibers and threads and yarns.txt
+Field and court sports equipment.txt
+Film and theater production support services.txt
+Fire protection.txt
+Fisheries and aquaculture.txt
+Fishing and aquaculture equipment.txt
+Fishing and hunting equipment.txt
+Fitness equipment.txt
+Floor coverings.txt
+Floriculture and silviculture products.txt
+Fluid and gas distribution.txt
+Food and beverage industries.txt
+Food and nutrition services.txt
+Footwear.txt
+Forestry.txt
+Forgings.txt
+Foundry machines and equipment and supplies.txt
+Fresh cut blooms of high species or variety count flowers.txt
+Fresh cut blooms of low species or variety count flowers.txt
+Fresh cut carnations.txt
+Fresh cut chrysanthemums.txt
+Fresh cut floral bouquets.txt
+Fresh cut greenery.txt
+Fresh cut orchids.txt
+Fresh cut rose.txt
+Fresh fruit purees.txt
+Fresh fruits.txt
+Fresh vegetable purees.txt
+Fresh vegetables.txt
+Frozen Non GMO vegetables.txt
+Frozen fruit.txt
+Frozen non GMO fruits.txt
+Frozen organic fruit.txt
+Frozen organic vegetables.txt
+Frozen vegetables.txt
+Fuel for nuclear reactors.txt
+Fuels.txt
+Funeral equipment and materials.txt
+Gambling or wagering equipment.txt
+Gaseous fuels and additives.txt
+Gaskets.txt
+Gemstones.txt
+Graphic design.txt
+Grinding and polishing and smoothing materials.txt
+Gymnastics and boxing equipment.txt
+Hand tools.txt
+Hardware.txt
+Heating and ventilation and air circulation.txt
+Heavy construction machinery and equipment.txt
+Heavy construction services.txt
+Hematolic drugs.txt
+Herbal drugs.txt
+Hormones and hormone antagonists.txt
+Horticulture.txt
+Hotels and lodging and meeting facilities.txt
+Housings and cabinets and casings.txt
+Human resources services.txt
+Humanitarian aid and relief.txt
+Hydraulic machinery and equipment.txt
+Hypnotics.txt
+Immunomodulating drugs.txt
+Independent living aids for the physically challenged.txt
+Industrial filtering and purification.txt
+Industrial food and beverage equipment.txt
+Industrial laundry and dry cleaning equipment.txt
+Industrial machine tools.txt
+Industrial optics.txt
+Industrial process machinery and equipment and supplies.txt
+Industrial pumps and compressors.txt
+Industrial refrigeration.txt
+Industrial use papers.txt
+Information Technology Service Delivery.txt
+Information services.txt
+Institutional food services equipment.txt
+Insulation.txt
+Insurance and retirement services.txt
+Interior finishing materials.txt
+International relations.txt
+Intravenous and arterial administration products.txt
+Janitorial equipment.txt
+Jewelry.txt
+Laboratory and scientific equipment.txt
+Laboratory supplies and fixtures.txt
+Lamps and lightbulbs and lamp components.txt
+Land and soil preparation and management and protection.txt
+Land parcels.txt
+Lapidary machinery and equipment.txt
+Launchers.txt
+Law enforcement.txt
+Leatherworking repairing machinery and equipment.txt
+Legal services.txt
+Light weapons and ammunition.txt
+Lighting Fixtures and Accessories.txt
+Live animals.txt
+Live carnations.txt
+Live chrysanthemums.txt
+Live orchids.txt
+Live plants of high species or variety count flowers.txt
+Live plants of low species or variety count flowers.txt
+Live rose bushes.txt
+Livestock services.txt
+Lubricants and oils and greases and anti corrosives.txt
+Luggage and handbags and packs and cases.txt
+Machine made parts.txt
+Machined castings.txt
+Machined extrusions.txt
+Machined forgings.txt
+Machined raw stock.txt
+Machinery and transport equipment manufacture.txt
+Machining and processing services.txt
+Machinings.txt
+Magnets and magnetic materials.txt
+Mail and cargo transport.txt
+Management advisory services.txt
+Manufacture of electrical goods and precision instruments.txt
+Manufacturing support services.txt
+Manufacturing technologies.txt
+Marine transport.txt
+Marketing and distribution.txt
+Mass transfer equipment.txt
+Material handling machinery and equipment.txt
+Material packing and handling.txt
+Measuring and observing and testing instruments.txt
+Meat and poultry products.txt
+Medical Surgical Equipment Maintenance Refurbishment and Repair Services.txt
+Medical apparel and textiles.txt
+Medical diagnostic imaging and nuclear medicine products.txt
+Medical facility products.txt
+Medical practice.txt
+Medical science research and experimentation.txt
+Medical sterilization products.txt
+Medical training and education supplies.txt
+Merchandising furniture and accessories.txt
+Metal and mineral industries.txt
+Metal cutting machinery and accessories.txt
+Metal forming machinery and accessories.txt
+Metal oxide.txt
+Metal treatment machinery.txt
+Metal waste scrap and by products.txt
+Military services and national defense.txt
+Military weapon and ammunition disarmament and disposal equipment and related products.txt
+Minerals and ores and metals.txt
+Mining and quarrying machinery and equipment.txt
+Mining services.txt
+Missiles.txt
+Mixers and their parts and accessories.txt
+Moldings.txt
+Motor vehicles.txt
+Musical Instruments and parts and accessories.txt
+Non GMO fresh fruit purees.txt
+Non GMO fresh fruits.txt
+Non GMO fresh vegetable purees.txt
+Non GMO fresh vegetables.txt
+Non edible animal products.txt
+Non edible plant and forestry products.txt
+Non motorized cycles.txt
+Nonresidential building construction services.txt
+Nonsteroidal anti inflammatory drugs NSAIDs.txt
+Nutritional supplements.txt
+Nuts and seeds.txt
+Office and desk accessories.txt
+Office machines and their supplies and accessories.txt
+Office supplies.txt
+Oil and gas data management and processing services.txt
+Oil and gas drilling and exploration equipment.txt
+Oil and gas drilling and operation materials.txt
+Oil and gas exploration services.txt
+Oil and gas extraction and production enhancement services.txt
+Oil and gas operating and production equipment.txt
+Oil and gas restoration and reclamation services.txt
+Oil and gas well project management services.txt
+Organic fresh fruit purees.txt
+Organic fresh fruits.txt
+Organic fresh vegetable purees.txt
+Organic fresh vegetables.txt
+Orthopedic and prosthetic and sports medicine products.txt
+Orthopedic surgical implants.txt
+Other sports.txt
+Packaging materials.txt
+Packing supplies.txt
+Packings glands boots and covers.txt
+Paints and primers and finishes.txt
+Paper materials.txt
+Paper products.txt
+Passenger transport.txt
+Passive discrete components.txt
+Patient care and treatment products and supplies.txt
+Patient exam and monitoring products.txt
+Performing arts.txt
+Permanent buildings and structures.txt
+Personal appearance.txt
+Personal care products.txt
+Personal safety and protection.txt
+Pest control products.txt
+Petroleum processing machinery.txt
+Pharmaceutical drug precursors.txt
+Photographic and recording media.txt
+Photographic filmmaking supplies.txt
+Photographic or filming or video equipment.txt
+Photographic services.txt
+Physical and occupational therapy and rehabilitation products.txt
+Pipe piping and pipe fittings.txt
+Plastic and chemical industries.txt
+Plumbing fixtures.txt
+Pneumatic and hydraulic and electric control systems.txt
+Pneumatic machinery and equipment.txt
+Political systems and institutions.txt
+Pollutants tracking and monitoring and rehabilitation services.txt
+Pollution tracking and monitoring and rehabilitation.txt
+Portable Structure Building Components.txt
+Portable buildings and structures.txt
+Postmortem and mortuary equipment and supplies.txt
+Power generation.txt
+Power sources.txt
+Prefabricated buildings and structures.txt
+Prepared and preserved foods.txt
+Printed circuits and integrated circuits and microassemblies.txt
+Printed media.txt
+Printing and publishing equipment.txt
+Professional artists and performers.txt
+Professional engineering services.txt
+Public administration and finance services.txt
+Public order and safety.txt
+Public relations and professional communications services.txt
+Public safety and control.txt
+Radiopharmaceuticals and contrast media.txt
+Railway and tramway machinery and equipment.txt
+Rapid prototyping machinery and accessories.txt
+Raw materials processing machinery.txt
+Real estate services.txt
+Recreation and playground and swimming and spa equipment and supplies.txt
+Refractories.txt
+Refuse disposal and treatment.txt
+Religious organizations.txt
+Reproduction services.txt
+Residential building construction services.txt
+Resins and rosins and other resin derived materials.txt
+Respiratory and anesthesia and resuscitation products.txt
+Restaurants and catering.txt
+Roads and landscape.txt
+Rockets and subsystems.txt
+Rope and chain and cable and wire and strap.txt
+Rubber and elastomers.txt
+Saddlery and harness goods.txt
+Sawmilling and lumber processing machinery and equipment.txt
+Scrap and waste materials.txt
+Seafood.txt
+Seals.txt
+Seasonings and preservatives.txt
+Security and personal safety.txt
+Security surveillance and detection.txt
+Seeds and bulbs and seedlings and cuttings.txt
+Sewing supplies and accessories.txt
+Signage and accessories.txt
+Sintered parts.txt
+Socio political conditions.txt
+Software.txt
+Solvents.txt
+Spacecraft.txt
+Specialized educational services.txt
+Specialized trade construction and maintenance services.txt
+Sports equipment and accessories.txt
+Stampings and sheet components.txt
+Statistics.txt
+Storage.txt
+Structural building products.txt
+Structural components and basic shapes.txt
+Structural materials.txt
+Surgical products.txt
+Sympathomimetic or adrenergic drugs.txt
+Target and table games and equipment.txt
+Taxation.txt
+Telecommunications media services.txt
+Textile and fabric machinery and accessories.txt
+Thoroughfares.txt
+Timepieces.txt
+Tobacco and smoking products and substitutes.txt
+Toxic and hazardous waste cleanup.txt
+Toys and games.txt
+Trade policy and regulation.txt
+Trade policy and services.txt
+Tranquilizers and antimanic and antianxiety drugs.txt
+Transport services.txt
+Transportation components and systems.txt
+Transportation repair or maintenance services.txt
+Transportation services equipment.txt
+Travel facilitation.txt
+Tubes tubing and tube fittings.txt
+Underground mining structures and materials.txt
+Utilities.txt
+Vasodilators.txt
+Vehicle bodies and trailers.txt
+Vending machines.txt
+Veterinary equipment and supplies.txt
+Vocational training.txt
+Water and wastewater treatment supply and disposal.txt
+Water resources development and oversight.txt
+Watersports equipment.txt
+Waxes and oils.txt
+Welding and soldering and brazing machinery and accessories and supplies.txt
+Well drilling and construction services.txt
+Well drilling and operation equipment.txt
+Wildlife and flora.txt
+Window treatments.txt
+Winter sports equipment.txt
+Wire machinery and equipment.txt
+Wood and paper industries.txt
+Work related organizations.txt
+Workplace safety equipment and supplies and training materials.txt
+Wound care products.txt
+Writing and translations.txt
+Accommodation furniture.txt
+Accounting and bookkeeping services.txt
+Additives.txt
+Adhesives and sealants.txt
+Adrenergic blocking agents.txt
+Advertising.txt
+Aerospace systems and components and equipment.txt
+Agents affecting water and electrolytes.txt
+Agricultural and forestry and landscape machinery and equipment.txt
+Aircraft.txt
+Alloys.txt
+Alternative and holistic medicine.txt
+Alternative educational systems.txt
+Amebicides and trichomonacides and antiprotozoals.txt
+Anaesthetic drugs and related adjuncts and analeptics.txt
+Animal containment and habitats.txt
+Animal feed.txt
+Anthelmintics.txt
+Antiarrythmics and antianginals and cardioplegics and drugs for heart failure.txt
+Antibacterials.txt
+Antidepressants.txt
+Antifungal drugs.txt
+Antihistamines or H1 blockers.txt
+Antihyperlipidemic and hypocholesterolemic agents.txt
+Antihypertensive drugs.txt
+Antineoplastic agents.txt
+Antipsychotics.txt
+Antiseptics.txt
+Antiviral drugs.txt
+Arts and crafts equipment and accessories and supplies.txt
+Atomic and nuclear energy machinery and equipment.txt
+Audio and visual presentation and composing equipment.txt
+Automation control devices and components and accessories.txt
+Automotive specialty tools.txt
+Autonomic nervous system drugs.txt
+Banking and investment.txt
+Batteries and generators and kinetic power transmission.txt
+Bearings and bushings and wheels and gears.txt
+Bedclothes and table and kitchen linen and towels.txt
+Beverages.txt
+Biological science services.txt
+Bread and bakery products.txt
+Building and facility maintenance and repair services.txt
+Business administration services.txt
+Camping and outdoor equipment and accessories.txt
+Canned or jarred Non GMO vegetables.txt
+Canned or jarred fruit.txt
+Canned or jarred non GMO fruits.txt
+Canned or jarred organic fruit.txt
+Canned or jarred organic vegetables.txt
+Canned or jarred vegetables.txt
+Castings and casting assemblies.txt
+Central nervous system drugs.txt
+Cereal and pulse products.txt
+Chicken processing machinery and equipment.txt
+Chocolate and sugars and sweeteners and confectionary products.txt
+Civic organizations and associations and movements.txt
+Classroom and instructional and institutional furniture and fixtures.txt
+Classroom decoratives and supplies.txt
+Cleaning and janitorial services.txt
+Cleaning and janitorial supplies.txt
+Clinical nutrition.txt
+Clothing.txt
+Clubs.txt
+Collectibles and awards.txt
+Colorants.txt
+Commercial and industrial furniture.txt
+Commercial sports.txt
+Communications Devices and Accessories.txt
+Community and social services.txt
+Components for information technology or broadcasting or telecommunications.txt
+Compounds and mixtures.txt
+Comprehensive health services.txt
+Computer Equipment and Accessories.txt
+Computer services.txt
+Concrete and cement and plaster.txt
+Construction and maintenance support equipment.txt
+Consumer electronics.txt
+Containers and storage.txt
+Contracts and Agreements.txt
+Controlled substance analgesics.txt
+Conventional war weapons.txt
+Corticosteroids.txt
+Credit agencies.txt
+Crop production and management and protection.txt
+Dairy products and eggs.txt
+Data Voice or Multimedia Network Equipment or Platforms and Accessories.txt
+Death and dying support services.txt
+Decontamination services.txt
+Decorative adornments.txt
+Defense and law enforcement and security and safety training equipment.txt
+Dental equipment and supplies.txt
+Development finance.txt
+Developmental and professional teaching aids and materials and accessories and supplies.txt
+Dialysis equipment and supplies.txt
+Discrete semiconductor devices.txt
+Disease prevention and control.txt
+Domestic and personal assistance.txt
+Domestic appliances.txt
+Domestic kitchenware and kitchen supplies.txt
+Domestic pet products.txt
+Domestic wall treatments.txt
+Doors and windows and glass.txt
+Dried Non GMO vegetables.txt
+Dried cut blooms of high species or variety count flowers.txt
+Dried cut blooms of low species or variety count flowers.txt
+Dried cut carnations.txt
+Dried cut chrysanthemums.txt
+Dried cut orchids.txt
+Dried cut roses.txt
+Dried fruit.txt
+Dried non GMO fruits.txt
+Dried organic fruit.txt
+Dried organic vegetables.txt
+Dried vegetables.txt
+Drugs affecting the ears.txt
+Drugs affecting the gastrointestinal system.txt
+Drugs affecting the respiratory tract.txt
+Dyeing and tanning extracts.txt
+Earth and stone.txt
+Earth science services.txt
+Economics.txt
+Edible oils and fats.txt
+Educational facilities.txt
+Educational institutions.txt
+Electrical equipment and components and supplies.txt
+Electrical wire and cable and harness.txt
+Electrical wire management devices and accessories and supplies.txt
+Electron tube devices and accessories.txt
+Electronic hardware and component parts and accessories.txt
+Electronic manufacturing machinery and equipment and accessories.txt
+Electronic reference material.txt
+Elements and gases.txt
+Emergency and field medical services products.txt
+Entertainment services.txt
+Environmental management.txt
+Environmental protection.txt
+Estrogens and progestins and internal contraceptives.txt
+Explosive materials.txt
+Exterior finishing materials.txt
+Extrusions.txt
+Fabricated bar stock assemblies.txt
+Fabricated pipe assemblies.txt
+Fabricated plate assemblies.txt
+Fabricated sheet assemblies.txt
+Fabricated structural assemblies.txt
+Fabricated tube assemblies.txt
+Fabrics and leather materials.txt
+Fertilizers and plant nutrients and herbicides.txt
+Fibers and textiles and fabric industries.txt
+Fibers and threads and yarns.txt
+Field and court sports equipment.txt
+Film and theater production support services.txt
+Fire protection.txt
+Fisheries and aquaculture.txt
+Fishing and aquaculture equipment.txt
+Fishing and hunting equipment.txt
+Fitness equipment.txt
+Floor coverings.txt
+Floriculture and silviculture products.txt
+Fluid and gas distribution.txt
+Food and beverage industries.txt
+Food and nutrition services.txt
+Footwear.txt
+Forestry.txt
+Forgings.txt
+Foundry machines and equipment and supplies.txt
+Fresh cut blooms of high species or variety count flowers.txt
+Fresh cut blooms of low species or variety count flowers.txt
+Fresh cut carnations.txt
+Fresh cut chrysanthemums.txt
+Fresh cut floral bouquets.txt
+Fresh cut greenery.txt
+Fresh cut orchids.txt
+Fresh cut rose.txt
+Fresh fruit purees.txt
+Fresh fruits.txt
+Fresh vegetable purees.txt
+Fresh vegetables.txt
+Frozen Non GMO vegetables.txt
+Frozen fruit.txt
+Frozen non GMO fruits.txt
+Frozen organic fruit.txt
+Frozen organic vegetables.txt
+Frozen vegetables.txt
+Fuel for nuclear reactors.txt
+Fuels.txt
+Funeral equipment and materials.txt
+Gambling or wagering equipment.txt
+Gaseous fuels and additives.txt
+Gaskets.txt
+Gemstones.txt
+Graphic design.txt
+Grinding and polishing and smoothing materials.txt
+Gymnastics and boxing equipment.txt
+Hand tools.txt
+Hardware.txt
+Heating and ventilation and air circulation.txt
+Heavy construction machinery and equipment.txt
+Heavy construction services.txt
+Hematolic drugs.txt
+Herbal drugs.txt
+Hormones and hormone antagonists.txt
+Horticulture.txt
+Hotels and lodging and meeting facilities.txt
+Housings and cabinets and casings.txt
+Human resources services.txt
+Humanitarian aid and relief.txt
+Hydraulic machinery and equipment.txt
+Hypnotics.txt
+Immunomodulating drugs.txt
+Independent living aids for the physically challenged.txt
+Industrial filtering and purification.txt
+Industrial food and beverage equipment.txt
+Industrial laundry and dry cleaning equipment.txt
+Industrial machine tools.txt
+Industrial optics.txt
+Industrial process machinery and equipment and supplies.txt
+Industrial pumps and compressors.txt
+Industrial refrigeration.txt
+Industrial use papers.txt
+Information Technology Service Delivery.txt
+Information services.txt
+Institutional food services equipment.txt
+Insulation.txt
+Insurance and retirement services.txt
+Interior finishing materials.txt
+International relations.txt
+Intravenous and arterial administration products.txt
+Janitorial equipment.txt
+Jewelry.txt
+Laboratory and scientific equipment.txt
+Laboratory supplies and fixtures.txt
+Lamps and lightbulbs and lamp components.txt
+Land and soil preparation and management and protection.txt
+Land parcels.txt
+Lapidary machinery and equipment.txt
+Launchers.txt
+Law enforcement.txt
+Leatherworking repairing machinery and equipment.txt
+Legal services.txt
+Light weapons and ammunition.txt
+Lighting Fixtures and Accessories.txt
+Live animals.txt
+Live carnations.txt
+Live chrysanthemums.txt
+Live orchids.txt
+Live plants of high species or variety count flowers.txt
+Live plants of low species or variety count flowers.txt
+Live rose bushes.txt
+Livestock services.txt
+Lubricants and oils and greases and anti corrosives.txt
+Luggage and handbags and packs and cases.txt
+Machine made parts.txt
+Machined castings.txt
+Machined extrusions.txt
+Machined forgings.txt
+Machined raw stock.txt
+Machinery and transport equipment manufacture.txt
+Machining and processing services.txt
+Machinings.txt
+Magnets and magnetic materials.txt
+Mail and cargo transport.txt
+Management advisory services.txt
+Manufacture of electrical goods and precision instruments.txt
+Manufacturing support services.txt
+Manufacturing technologies.txt
+Marine transport.txt
+Marketing and distribution.txt
+Mass transfer equipment.txt
+Material handling machinery and equipment.txt
+Material packing and handling.txt
+Measuring and observing and testing instruments.txt
+Meat and poultry products.txt
+Medical Surgical Equipment Maintenance Refurbishment and Repair Services.txt
+Medical apparel and textiles.txt
+Medical diagnostic imaging and nuclear medicine products.txt
+Medical facility products.txt
+Medical practice.txt
+Medical science research and experimentation.txt
+Medical sterilization products.txt
+Medical training and education supplies.txt
+Merchandising furniture and accessories.txt
+Metal and mineral industries.txt
+Metal cutting machinery and accessories.txt
+Metal forming machinery and accessories.txt
+Metal oxide.txt
+Metal treatment machinery.txt
+Metal waste scrap and by products.txt
+Military services and national defense.txt
+Military weapon and ammunition disarmament and disposal equipment and related products.txt
+Minerals and ores and metals.txt
+Mining and quarrying machinery and equipment.txt
+Mining services.txt
+Missiles.txt
+Mixers and their parts and accessories.txt
+Moldings.txt
+Motor vehicles.txt
+Musical Instruments and parts and accessories.txt
+Non GMO fresh fruit purees.txt
+Non GMO fresh fruits.txt
+Non GMO fresh vegetable purees.txt
+Non GMO fresh vegetables.txt
+Non edible animal products.txt
+Non edible plant and forestry products.txt
+Non motorized cycles.txt
+Nonresidential building construction services.txt
+Nonsteroidal anti inflammatory drugs NSAIDs.txt
+Nutritional supplements.txt
+Nuts and seeds.txt
+Office and desk accessories.txt
+Office machines and their supplies and accessories.txt
+Office supplies.txt
+Oil and gas data management and processing services.txt
+Oil and gas drilling and exploration equipment.txt
+Oil and gas drilling and operation materials.txt
+Oil and gas exploration services.txt
+Oil and gas extraction and production enhancement services.txt
+Oil and gas operating and production equipment.txt
+Oil and gas restoration and reclamation services.txt
+Oil and gas well project management services.txt
+Organic fresh fruit purees.txt
+Organic fresh fruits.txt
+Organic fresh vegetable purees.txt
+Organic fresh vegetables.txt
+Orthopedic and prosthetic and sports medicine products.txt
+Orthopedic surgical implants.txt
+Other sports.txt
+Packaging materials.txt
+Packing supplies.txt
+Packings glands boots and covers.txt
+Paints and primers and finishes.txt
+Paper materials.txt
+Paper products.txt
+Passenger transport.txt
+Passive discrete components.txt
+Patient care and treatment products and supplies.txt
+Patient exam and monitoring products.txt
+Performing arts.txt
+Permanent buildings and structures.txt
+Personal appearance.txt
+Personal care products.txt
+Personal safety and protection.txt
+Pest control products.txt
+Petroleum processing machinery.txt
+Pharmaceutical drug precursors.txt
+Photographic and recording media.txt
+Photographic filmmaking supplies.txt
+Photographic or filming or video equipment.txt
+Photographic services.txt
+Physical and occupational therapy and rehabilitation products.txt
+Pipe piping and pipe fittings.txt
+Plastic and chemical industries.txt
+Plumbing fixtures.txt
+Pneumatic and hydraulic and electric control systems.txt
+Pneumatic machinery and equipment.txt
+Political systems and institutions.txt
+Pollutants tracking and monitoring and rehabilitation services.txt
+Pollution tracking and monitoring and rehabilitation.txt
+Portable Structure Building Components.txt
+Portable buildings and structures.txt
+Postmortem and mortuary equipment and supplies.txt
+Power generation.txt
+Power sources.txt
+Prefabricated buildings and structures.txt
+Prepared and preserved foods.txt
+Printed circuits and integrated circuits and microassemblies.txt
+Printed media.txt
+Printing and publishing equipment.txt
+Professional artists and performers.txt
+Professional engineering services.txt
+Public administration and finance services.txt
+Public order and safety.txt
+Public relations and professional communications services.txt
+Public safety and control.txt
+Radiopharmaceuticals and contrast media.txt
+Railway and tramway machinery and equipment.txt
+Rapid prototyping machinery and accessories.txt
+Raw materials processing machinery.txt
+Real estate services.txt
+Recreation and playground and swimming and spa equipment and supplies.txt
+Refractories.txt
+Refuse disposal and treatment.txt
+Religious organizations.txt
+Reproduction services.txt
+Residential building construction services.txt
+Resins and rosins and other resin derived materials.txt
+Respiratory and anesthesia and resuscitation products.txt
+Restaurants and catering.txt
+Roads and landscape.txt
+Rockets and subsystems.txt
+Rope and chain and cable and wire and strap.txt
+Rubber and elastomers.txt
+Saddlery and harness goods.txt
+Sawmilling and lumber processing machinery and equipment.txt
+Scrap and waste materials.txt
+Seafood.txt
+Seals.txt
+Seasonings and preservatives.txt
+Security and personal safety.txt
+Security surveillance and detection.txt
+Seeds and bulbs and seedlings and cuttings.txt
+Sewing supplies and accessories.txt
+Signage and accessories.txt
+Sintered parts.txt
+Socio political conditions.txt
+Software.txt
+Solvents.txt
+Spacecraft.txt
+Specialized educational services.txt
+Specialized trade construction and maintenance services.txt
+Sports equipment and accessories.txt
+Stampings and sheet components.txt
+Statistics.txt
+Storage.txt
+Structural building products.txt
+Structural components and basic shapes.txt
+Structural materials.txt
+Surgical products.txt
+Sympathomimetic or adrenergic drugs.txt
+Target and table games and equipment.txt
+Taxation.txt
+Telecommunications media services.txt
+Textile and fabric machinery and accessories.txt
+Thoroughfares.txt
+Timepieces.txt
+Tobacco and smoking products and substitutes.txt
+Toxic and hazardous waste cleanup.txt
+Toys and games.txt
+Trade policy and regulation.txt
+Trade policy and services.txt
+Tranquilizers and antimanic and antianxiety drugs.txt
+Transport services.txt
+Transportation components and systems.txt
+Transportation repair or maintenance services.txt
+Transportation services equipment.txt
+Travel facilitation.txt
+Tubes tubing and tube fittings.txt
+Underground mining structures and materials.txt
+Utilities.txt
+Vasodilators.txt
+Vehicle bodies and trailers.txt
+Vending machines.txt
+Veterinary equipment and supplies.txt
+Vocational training.txt
+Water and wastewater treatment supply and disposal.txt
+Water resources development and oversight.txt
+Watersports equipment.txt
+Waxes and oils.txt
+Welding and soldering and brazing machinery and accessories and supplies.txt
+Well drilling and construction services.txt
+Well drilling and operation equipment.txt
+Wildlife and flora.txt
+Window treatments.txt
+Winter sports equipment.txt
+Wire machinery and equipment.txt
+Wood and paper industries.txt
+Work related organizations.txt
+Workplace safety equipment and supplies and training materials.txt
+Wound care products.txt
+Writing and translations.txt
+Performing test curl for Accommodation%20furniture.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100     3  100     3    0     0     33      0 --:--:-- --:--:-- --:--:--    33
+88
+Success! Cleaning up and exiting.
