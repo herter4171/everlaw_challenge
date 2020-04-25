@@ -12,8 +12,8 @@
 # INPUT VALIDATION: The first check is ensuring exactly 4 arguments have been
 # supplied.  This is followed by ensuring a viable SSH pathway, which confirms 
 # the supplied keyfile and remote IP are valid.  From there, the URL is checked 
-# to ensure it has the .csv extension.  Last of all is ensuring the provided
-# column number is in bounds based on awk column indexing. 
+# to ensure it has the assumed .csv extension.  Last of all is ensuring the 
+# provided column number is in bounds based on awk column indexing. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
@@ -27,9 +27,10 @@
 #-----------------------------------------------------------------------------#
 
 # Validate argument count, and print input arg spec if wrong count
-if [[ $# != 4 ]]; then 
+REQ_ARG_CT=4
+if [[ $# != $REQ_ARG_CT ]]; then 
     echo "ERROR: Expect four arguments.  See arg list below."
-    grep -A 4 "^# INPUT ARGUMENTS:" $0
+    grep -A $REQ_ARG_CT "^# INPUT ARGUMENTS:" $0
     exit 1
 fi
 
@@ -41,11 +42,14 @@ SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 
 # Make sure we can connect to the remote
 $SSH_PFX echo 'Hello from $HOSTNAME'
-if [[ $? != 0 ]]; then echo "Failed to connect to $2"; exit 1; fi
+if [[ $? != 0 ]]; then 
+    echo "Failed to connect to $2"
+    exit 1
+fi
 
 # Make sure given URL is *.csv
 if [[ $(echo $CSV_URL | grep -c .csv$) == 0 ]]; then
-    echo "ERROR: URL doesn't appear to point to a csv file."
+    echo "ERROR: Expect URL ending with .csv extension."
     echo "Given URL is \"$CSV_URL\""
     exit 1
 fi
@@ -139,13 +143,13 @@ docker container ls
 EOF
 
 #-----------------------------------------------------------------------------#
-# CSV DOWNLOAD AND COLUMN PARSE
+# CSV DOWNLOAD AND COLUMN PARSING
 #-----------------------------------------------------------------------------#
 
 # Get filename from tail-end of URL, and add spaces where applicable
 CSV_FILE=$(echo ${CSV_URL##*/} | sed 's/%20/ /g')
 
-# Download csv file if not already present
+# Download csv file if not already present from prior likely error run
 if [ ! -f "$CSV_FILE" ]; then 
     wget $CSV_URL
     sed -i 1d "$CSV_FILE" # Remove first line to exclude column headings
@@ -171,14 +175,14 @@ awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
 sed -i 's/^ //g; s/"//g' $COL_FILE
 
 #-----------------------------------------------------------------------------#
-# COLUMN DATA VALUE PARSING AND UPLOAD
+# COLUMN DATA VALUE PARSING
 #-----------------------------------------------------------------------------#
 
 # Make sure a dir exists for text files and that it's empty
 TXT_DIR=$PWD/txt_upload ; mkdir -p $TXT_DIR; rm -rf $TXT_DIR/*
 
-# Write counts of text with IFS set to only newline to be safe
-IFS=$'\n' 
+# Write counts of text with IFS set to only newline
+OLDIFS=$IFS; IFS=$'\n' 
 for CURR_LN in $(cat $COL_FILE); do
     CURR_LN_FILE="$TXT_DIR/${CURR_LN}.txt"
 
@@ -190,11 +194,33 @@ for CURR_LN in $(cat $COL_FILE); do
     fi
 done
 
-# Upload test files to the remote's htdocs folder
-cd $TXT_DIR
-scp -i $PRIV_KEY *.txt ubuntu@$EC2_IP:/home/ubuntu/htdocs
+# Reset field sep so that things don't break
+IFS=$OLDIFS
+
+#-----------------------------------------------------------------------------#
+# TEXT FILE UPLOAD AND TEST
+#-----------------------------------------------------------------------------#
+
+# Upload text files to the remote's htdocs folder
+cd $TXT_DIR ; TARBALL=text_files.tar
+tar -cvf $TARBALL *.txt
+scp -i $PRIV_KEY $TARBALL ubuntu@$EC2_IP:/home/ubuntu/htdocs
+$SSH_PFX /bin/bash <<EOF
+cd htdocs
+tar -xvf $TARBALL
+rm $TARBALL
+EOF
 
 # Do a test curl on the first file alphabetically for sanity check
 TEST_FILE=$(ls | head -n 1 | sed 's/ /%20/g')
 echo "Performing test curl for $TEST_FILE"
-echo "Result: $(curl http://$EC2_IP/$TEST_FILE)"
+curl -f http://$EC2_IP/$TEST_FILE
+
+# Indicate outcome, and clean files if succsessful
+if [[ $? == 0 ]]; then
+    echo "Success! Cleaning up and exiting."
+    cd .. 
+    rm -rf docker-compose.yml $COL_FILE "$CSV_FILE" $TXT_DIR
+else
+    echo "ERROR:  Check output above."
+fi
