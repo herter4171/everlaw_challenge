@@ -44,10 +44,10 @@ EC2_IP=$1; PRIV_KEY=$2; CSV_URL=$3; CSV_COL=$4
 SSH_PFX="ssh -i $PRIV_KEY ubuntu@$EC2_IP"
 
 # Make sure we can connect to the remote.  User may have to enter "yes" for
-# first connection, but this seems better disabling strict key checking
+# first connection, but this seems better than disabling strict key checking
 $SSH_PFX echo 'Hello from $HOSTNAME'
 if [[ $? != 0 ]]; then 
-    echo "Failed to connect to $2"
+    echo "Failed to connect to $EC2_IP via $PRIV_KEY"
     exit 1
 fi
 
@@ -175,7 +175,7 @@ COL_FILE=col.txt
 awk -F ',' -v col=$CSV_COL '{print $col}' "$CSV_FILE" > $COL_FILE
 
 # I know double quotes can be ignored, but they got pretty obnoxious
-# Also, some entries had leading spaces for whatever reason
+# Also, some entries had leading spaces likely from quoted strings with commas
 sed -i 's/^ //g; s/"//g' $COL_FILE
 
 #-----------------------------------------------------------------------------#
