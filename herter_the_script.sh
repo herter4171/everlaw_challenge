@@ -214,9 +214,9 @@ rm $TARBALL
 EOF
 
 # Do a test curl on the first file alphabetically for sanity check
-TEST_FILE=$(ls | head -n 1 | sed 's/ /%20/g')
-echo "Performing test curl for $TEST_FILE"
-curl -f http://$EC2_IP/$TEST_FILE
+TEST_URL="http://$EC2_IP/$(ls | head -n 1 | sed 's/ /%20/g')"
+echo "Performing test curl for $TEST_URL"
+curl -f $TEST_URL
 
 # Indicate outcome, and clean files if succsessful
 if [[ $? == 0 ]]; then
