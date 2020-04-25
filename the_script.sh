@@ -184,8 +184,9 @@ for CURR_LN in $(cat $COL_FILE); do
 
     # Indicate new val, then write count to file
     if [ ! -f "$CURR_LN_FILE" ]; then
-        echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g')"
-        grep -c "$CURR_LN" col.txt > "$CURR_LN_FILE"
+        COUNT=$(grep -c "$CURR_LN" col.txt)
+        echo "Unique Val: $(echo "$CURR_LN" | sed 's/%20/ /g'), Count: $COUNT"
+        echo $COUNT > "$CURR_LN_FILE"
     fi
 done
 
