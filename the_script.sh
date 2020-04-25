@@ -6,14 +6,14 @@
 # the given remote EC2 instance that has values for a given column as pages
 # that contain the number of occurences of said value in the column.  Setting
 # this up involves ensuring Docker and Docker Compose are installed on the
-# remote followed by launching the web server, obtaining the csv file, and 
-# parsing the user-specified column.  
+# remote followed by launching the web server, obtaining the csv file, parsing 
+# out the user-specified column into text files, and uploading to the remote.  
 #
 # INPUT VALIDATION: The first check is ensuring exactly 4 arguments have been
 # supplied.  This is followed by ensuring a viable SSH pathway, which confirms 
 # the supplied keyfile and remote IP are valid.  From there, the URL is checked 
-# to ensure it has the csv extension.  Last of all is ensuring the column 
-# number is in bounds. 
+# to ensure it has the .csv extension.  Last of all is ensuring the provided
+# column number is in bounds. 
 #
 # INPUT ARGUMENTS: 
 #   $1: IP address of EC2 instance to operate on
@@ -23,7 +23,7 @@
 #-----------------------------------------------------------------------------#
 
 #-----------------------------------------------------------------------------#
-# INIT AND COMMONLY USED VARS
+# INITIAL CHECKS AND COMMONLY USED VARS
 #-----------------------------------------------------------------------------#
 
 # Validate argument count, and print input arg spec if wrong count
@@ -51,7 +51,7 @@ if [[ $(echo $CSV_URL | grep -c .csv$) == 0 ]]; then
 fi
 
 #-----------------------------------------------------------------------------#
-# DOCKER SETUP
+# DOCKER INSTALL AND SETUP
 #-----------------------------------------------------------------------------#
 
 # Make sure Docker and docker-compose are installed on the remote
