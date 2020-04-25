@@ -2,12 +2,13 @@
 #-----------------------------------------------------------------------------#
 # AUTHOR: Justin Herter
 #
-# FUNCTIONALITY:  The end state from running this is an Apache Web Server on
-# the given remote EC2 instance that has values for a given column as pages
-# that contain the number of occurences of said value in the column.  Setting
-# this up involves ensuring Docker and Docker Compose are installed on the
-# remote followed by launching the web server, obtaining the csv file, parsing 
-# out the user-specified column into text files, and uploading to the remote.  
+# FUNCTIONALITY:  The end state from running this is an Apache Web Server 
+# running in a container on the given remote EC2 instance that has values for 
+# a given column as pages that contain the number of occurences of said value 
+# in the column.  Setting this up involves ensuring Docker and Docker Compose 
+# are installed on the remote followed by launching the web server, obtaining 
+# the csv file, parsing out the user-specified column into text files, and 
+# uploading to the remote.  
 #
 # INPUT VALIDATION: The first check is ensuring exactly 4 arguments have been
 # supplied.  This is followed by ensuring a viable SSH pathway, which confirms 
