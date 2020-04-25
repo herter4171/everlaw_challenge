@@ -10,12 +10,8 @@ Relevant files are as follows.
 * [herter_the_script.sh](herter_the_script.sh): Shell script with all desired functionality
 * [herter_the_script.log](herter_the_script.log): Outcome from running the above using
     * A fresh Ubuntu 18.04 EC2 instance
-    * Input parameters given below
-
-These are the csv-related parameters I used for most of my testing.
-* URL: https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
-* Column: 4
-
+    * URL: https://data.ok.gov/sites/default/files/unspsc%20codes_3.csv
+    * Column: 4
 
 ## Assumptions
 ### Using Ubuntu 18.04 instead of 16.04
